@@ -8,7 +8,10 @@ import javafx.beans.property.*;
  * Model class for a Mountain
  */
 
+//PresentationModel
 public class Mountain {
+    private final StringProperty windowTitle = new SimpleStringProperty("MountainApp");
+    private final StringProperty buttontext   = new SimpleStringProperty("Try Me");
 
     private final StringProperty name = new SimpleStringProperty();
     private final IntegerProperty id = new SimpleIntegerProperty();
@@ -22,6 +25,7 @@ public class Mountain {
     private final StringProperty kanton = new SimpleStringProperty();
     private final StringProperty gebiet = new SimpleStringProperty();
     private final StringProperty bildunterschrift = new SimpleStringProperty();
+
 
     //Default Konstruktor
     public Mountain() {
@@ -79,7 +83,30 @@ public class Mountain {
                 getBildunterschrift()
         );
     }
+    //getter und setter
+    public String getButtonText() {
+        return buttontext.get();
+    }
 
+    public StringProperty buttontextProperty() {
+        return buttontext;
+    }
+
+    public void setButtonText(String button) {
+        this.buttontext.set(button);
+    }
+
+    public String getWindowTitle() {
+        return windowTitle.get();
+    }
+
+    public StringProperty windowTitleProperty() {
+        return windowTitle;
+    }
+
+    public void setWindowTitle(String windowTitle) {
+        this.windowTitle.set(windowTitle);
+    }
     public String getName() {
         return name.get();
     }

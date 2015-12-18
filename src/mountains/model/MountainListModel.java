@@ -28,6 +28,7 @@ public class MountainListModel {
 
     private final ObservableList<Mountain> mountain = FXCollections.observableArrayList();
 
+
     public MountainListModel() {
         mountain.addAll(readFromFile());
     }
