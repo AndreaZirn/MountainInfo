@@ -14,9 +14,10 @@ public class SplitLayout extends SplitPane {
 
     private void initializeControls() {
 
+
     }
     private void layoutControls() {
-
+        setDividerPosition(1,0);
     }
 }
 

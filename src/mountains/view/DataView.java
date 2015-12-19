@@ -1,5 +1,6 @@
 package mountains.view;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
@@ -40,13 +41,16 @@ public class DataView extends GridPane {
 
     private Mountain mountain;
 
-
     public DataView(Mountain model) {
         initializeControls();
         layoutControls();
     }
 
     private void initializeControls() {
+
+        setHgap(5);
+        setVgap(20);
+        setPadding(new Insets(10, 10, 10, 10)); //top, right, bottom, left
 
         nameLabel = createLabel("Name:");
         hoeheLabel= createLabel("Höhe:");
@@ -89,8 +93,9 @@ public class DataView extends GridPane {
         c4.setPercentWidth(30);
         getColumnConstraints().addAll(c1, c2, c3, c4);
 
-        /*RowConstraints rc = new RowConstraints();
-        rc.setVgrow(Priority.ALWAYS); */
+
+        RowConstraints rc = new RowConstraints();
+        rc.setVgrow(Priority.ALWAYS);
         RowConstraints r1 = new RowConstraints(50);
         RowConstraints r2 = new RowConstraints(50);
         RowConstraints r3 = new RowConstraints(50);
@@ -100,32 +105,29 @@ public class DataView extends GridPane {
         getRowConstraints().addAll(r1, r2, r3, r4, r5, r6);
 
 
-        add(nameLabel, 0, 0, 2, 2);
-        add(hoeheLabel, 2, 0, 2, 2);
-        add(dominanzLabel, 0, 1, 2, 2);
-        add(kmBisLabel, 2, 1, 2, 2);
-        add(mBisLabel, 0, 2, 2, 2);
-        add(schartenhoeheLabel, 2, 2, 2, 2);
-        add(typLabel, 0, 3, 2, 2);
-        add(regionLabel, 2, 3, 2, 2);
-        add(kantonLabel, 0, 4, 2, 2);
-        add(gebietLabel, 2, 4, 2, 2);
-        add(bildunterschriftLabel, 0, 5, 2, 2);
+        add(nameLabel, 0, 0);
+        add(hoeheLabel, 2, 0);
+        add(dominanzLabel, 0, 1);
+        add(kmBisLabel, 2, 1);
+        add(mBisLabel, 0, 2);
+        add(schartenhoeheLabel, 2, 2);
+        add(typLabel, 0, 3);
+        add(regionLabel, 2, 3);
+        add(kantonLabel, 0, 4);
+        add(gebietLabel, 2, 4);
+        add(bildunterschriftLabel, 0, 5);
 
-        add(nameField, 1, 0, 1, 1);
-        add(hoeheField, 3, 0, 1, 1);
-        add(dominanzField, 1, 1, 1, 1);
-        add(kmBisField, 3, 1, 1, 1);
-        add(mBisField, 1, 2, 1, 1);
-        add(schartenhoeheField, 3, 2, 1, 1);
-        add(typField, 1, 3, 1, 1);
-        add(regionField, 3, 3, 1, 1);
-        add(kantonField, 1, 4, 1, 1);
-        add(gebietField, 3, 4, 1, 1);
-        add(bildunterschriftField, 1, 5, 1, 1);
-
-
-// add(hoeheField, 0, 0, 1, 2); //colIndex, rowIndex, colSpan, rowSpan
+        add(nameField, 1, 0);
+        add(hoeheField, 3, 0);
+        add(dominanzField, 1, 1);
+        add(kmBisField, 3, 1);
+        add(mBisField, 1, 2);
+        add(schartenhoeheField, 3, 2);
+        add(typField, 1, 3);
+        add(regionField, 3, 3);
+        add(kantonField, 1, 4);
+        add(gebietField, 3, 4);
+        add(bildunterschriftField, 1, 5, 3, 1); //colIndex, rowIndex, colSpan, rowSpan
 
 
     }
