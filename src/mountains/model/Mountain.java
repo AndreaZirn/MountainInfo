@@ -8,10 +8,9 @@ import javafx.beans.property.*;
  * Model class for a Mountain
  */
 
-//PresentationModel
 public class Mountain {
-    private final StringProperty windowTitle = new SimpleStringProperty("MountainApp");
-    private final StringProperty buttontext   = new SimpleStringProperty("Try Me");
+
+    private final StringProperty windowTitle = new SimpleStringProperty("Meow");
 
     private final StringProperty name = new SimpleStringProperty();
     private final IntegerProperty id = new SimpleIntegerProperty();
@@ -59,7 +58,7 @@ public class Mountain {
 
         Mountain mountain = (Mountain) o;
 
-        return getId() == (mountain.getId());
+        return getId() == mountain.getId();
     }
 
     @Override
@@ -84,18 +83,6 @@ public class Mountain {
         );
     }
     //getter und setter
-    public String getButtonText() {
-        return buttontext.get();
-    }
-
-    public StringProperty buttontextProperty() {
-        return buttontext;
-    }
-
-    public void setButtonText(String button) {
-        this.buttontext.set(button);
-    }
-
     public String getWindowTitle() {
         return windowTitle.get();
     }
@@ -250,4 +237,5 @@ public class Mountain {
     public void setBildunterschrift(String bildunterschrift) {
         this.bildunterschrift.set(bildunterschrift);
     }
+
 }

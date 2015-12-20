@@ -5,7 +5,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import mountains.model.Mountain;
 
@@ -50,7 +49,7 @@ public class DataView extends GridPane {
 
         setHgap(5);
         setVgap(20);
-        setPadding(new Insets(10, 10, 10, 10)); //top, right, bottom, left
+        setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
 
         nameLabel = createLabel("Name:");
         hoeheLabel= createLabel("Höhe:");
@@ -81,8 +80,8 @@ public class DataView extends GridPane {
 
 
     private void layoutControls() {
-        ColumnConstraints cc = new ColumnConstraints();
-        cc.setHgrow(Priority.ALWAYS);
+        //ColumnConstraints cc = new ColumnConstraints();
+        //cc.setHgrow(Priority.ALWAYS);
         ColumnConstraints c1 = new ColumnConstraints();
         c1.setPercentWidth(20);
         ColumnConstraints c2 = new ColumnConstraints();
@@ -94,40 +93,42 @@ public class DataView extends GridPane {
         getColumnConstraints().addAll(c1, c2, c3, c4);
 
 
-        RowConstraints rc = new RowConstraints();
-        rc.setVgrow(Priority.ALWAYS);
-        RowConstraints r1 = new RowConstraints(50);
-        RowConstraints r2 = new RowConstraints(50);
-        RowConstraints r3 = new RowConstraints(50);
-        RowConstraints r4 = new RowConstraints(50);
-        RowConstraints r5 = new RowConstraints(50);
-        RowConstraints r6 = new RowConstraints(50);
-        getRowConstraints().addAll(r1, r2, r3, r4, r5, r6);
+        //RowConstraints rc = new RowConstraints();
+        //rc.setVgrow(Priority.ALWAYS);
+        RowConstraints r1 = new RowConstraints();
+        r1.setPercentHeight(60);
+        RowConstraints r2 = new RowConstraints(30);
+        RowConstraints r3 = new RowConstraints(30);
+        RowConstraints r4 = new RowConstraints(30);
+        RowConstraints r5 = new RowConstraints(30);
+        RowConstraints r6 = new RowConstraints(30);
+        RowConstraints r7 = new RowConstraints(30);
+        getRowConstraints().addAll(r1, r2, r3, r4, r5, r6, r7);
 
+        //TODO: +. Reihe mit Bild
+        add(nameLabel, 0, 1);
+        add(hoeheLabel, 2, 1);
+        add(dominanzLabel, 0, 2);
+        add(kmBisLabel, 2, 2);
+        add(mBisLabel, 0, 3);
+        add(schartenhoeheLabel, 2, 3);
+        add(typLabel, 0, 4);
+        add(regionLabel, 2, 4);
+        add(kantonLabel, 0, 5);
+        add(gebietLabel, 2, 5);
+        add(bildunterschriftLabel, 0, 6);
 
-        add(nameLabel, 0, 0);
-        add(hoeheLabel, 2, 0);
-        add(dominanzLabel, 0, 1);
-        add(kmBisLabel, 2, 1);
-        add(mBisLabel, 0, 2);
-        add(schartenhoeheLabel, 2, 2);
-        add(typLabel, 0, 3);
-        add(regionLabel, 2, 3);
-        add(kantonLabel, 0, 4);
-        add(gebietLabel, 2, 4);
-        add(bildunterschriftLabel, 0, 5);
-
-        add(nameField, 1, 0);
-        add(hoeheField, 3, 0);
-        add(dominanzField, 1, 1);
-        add(kmBisField, 3, 1);
-        add(mBisField, 1, 2);
-        add(schartenhoeheField, 3, 2);
-        add(typField, 1, 3);
-        add(regionField, 3, 3);
-        add(kantonField, 1, 4);
-        add(gebietField, 3, 4);
-        add(bildunterschriftField, 1, 5, 3, 1); //colIndex, rowIndex, colSpan, rowSpan
+        add(nameField, 1, 1);
+        add(hoeheField, 3, 1);
+        add(dominanzField, 1, 2);
+        add(kmBisField, 3, 2);
+        add(mBisField, 1, 3);
+        add(schartenhoeheField, 3, 3);
+        add(typField, 1, 4);
+        add(regionField, 3, 4);
+        add(kantonField, 1, 5);
+        add(gebietField, 3, 5);
+        add(bildunterschriftField, 1, 6, 3, 1); //colIndex, rowIndex, colSpan, rowSpan
 
 
     }

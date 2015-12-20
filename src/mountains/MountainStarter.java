@@ -18,7 +18,6 @@ public class MountainStarter extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Mountain model = new Mountain();
-
         Parent rootPanel = new MountainUI(model);
         Scene scene = new Scene(rootPanel);
 
