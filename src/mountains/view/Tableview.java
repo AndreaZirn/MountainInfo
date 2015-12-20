@@ -10,15 +10,15 @@ import mountains.model.MountainListModel;
 /**
  * Created by andreazirn on 18/12/15.
  */
-public class Tableview extends VBox {
-
+public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
-    private MountainListModel mountainListModel;
+    private final MountainListModel mountainlist;
 
     private TableView<Mountain> mountainTable;
 
 
-    public Tableview(Mountain model) {
+    public Tableview(MountainListModel mountainlist) {
+        this.mountainlist = mountainlist;
         initializeControls();
         layoutControls();
         addEventHandlers();
@@ -27,12 +27,17 @@ public class Tableview extends VBox {
     }
 
 
-    private void initializeControls() {
+    @Override
+    public MountainListModel getPresentationModel() {
+        return mountainlist;
+    }
+    @Override
+    public void initializeControls() {
         mountainTable = initializeMountainTabelle();
     }
 
     private TableView<Mountain> initializeMountainTabelle(){
-        TableView<Mountain> tableView = new TableView<>(mountainListModel.getMountain());
+        TableView<Mountain> tableView = new TableView<>(mountainlist.getMountain());
 
         TableColumn<Mountain, Integer> idColumn = new TableColumn<>("ID");
         TableColumn<Mountain, String> nameColumn = new TableColumn<>("Name");
@@ -48,19 +53,19 @@ public class Tableview extends VBox {
     }
 
 
-
-    private void layoutControls() {
+    @Override
+    public void layoutControls() {
         setVgrow(mountainTable, Priority.ALWAYS);
         getChildren().addAll(mountainTable);
 
     }
-
-    private void addEventHandlers() {
+    @Override
+    public void addEventHandlers() {
     }
-
-    private void addValueChangedListeners() {
+    @Override
+    public void addValueChangedListeners() {
     }
-
+    @Override
     public void addBindings() {
 
     }

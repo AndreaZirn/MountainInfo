@@ -10,8 +10,6 @@ import javafx.beans.property.*;
 
 public class Mountain {
 
-    private final StringProperty windowTitle = new SimpleStringProperty("Meow");
-
     private final StringProperty name = new SimpleStringProperty();
     private final IntegerProperty id = new SimpleIntegerProperty();
     private final DoubleProperty hoehe = new SimpleDoubleProperty();
@@ -83,17 +81,7 @@ public class Mountain {
         );
     }
     //getter und setter
-    public String getWindowTitle() {
-        return windowTitle.get();
-    }
 
-    public StringProperty windowTitleProperty() {
-        return windowTitle;
-    }
-
-    public void setWindowTitle(String windowTitle) {
-        this.windowTitle.set(windowTitle);
-    }
     public String getName() {
         return name.get();
     }

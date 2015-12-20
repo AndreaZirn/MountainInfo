@@ -1,22 +1,29 @@
 package mountains.view;
 
 import javafx.scene.control.SplitPane;
-import mountains.model.Mountain;
+import mountains.model.MountainListModel;
 
 /**
  * Created by andreazirn on 18/12/15.
  */
-public class SplitLayout extends SplitPane {
+public class SplitLayout extends SplitPane implements ViewMixin<MountainListModel> {
 
-    public SplitLayout(Mountain model) {
+    private final MountainListModel mountainlist;
+
+    public SplitLayout(MountainListModel mountainlist) {
+        this.mountainlist = mountainlist;
         initializeControls();
         layoutControls();  }
 
-    private void initializeControls() {
-
-
+    @Override
+    public MountainListModel getPresentationModel() {
+        return mountainlist;
     }
-    private void layoutControls() {
+    @Override
+    public void initializeControls() {
+    }
+    @Override
+    public void layoutControls() {
         setDividerPosition(1,0);
     }
 }

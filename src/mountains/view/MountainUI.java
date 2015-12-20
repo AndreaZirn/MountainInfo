@@ -1,16 +1,13 @@
 package mountains.view;
 
 import javafx.scene.layout.BorderPane;
-import mountains.model.Mountain;
+import mountains.model.MountainListModel;
 
 /**
  * Created by andreazirn on 18/12/15.
  */
-public class MountainUI extends BorderPane implements ViewMixin<Mountain> {
-
-    //TODO: Borderpane: oben: Navigation, center: SplitPane
-    //Deklaration aller Controls
-    private final Mountain model;
+public class MountainUI extends BorderPane implements ViewMixin<MountainListModel> {
+    private final MountainListModel model;
 
     private SplitLayout splitLayout;
     private Navigation navigation;
@@ -18,13 +15,13 @@ public class MountainUI extends BorderPane implements ViewMixin<Mountain> {
     private Tableview tableview;
 
 
-    public MountainUI(Mountain model) {
+    public MountainUI(MountainListModel model) {
         this.model = model;
         init();
     }
 
     @Override
-    public Mountain getMountain() {
+    public MountainListModel getPresentationModel() {
         return model;
     }
 

@@ -8,7 +8,7 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import mountains.model.Mountain;
+import mountains.model.MountainListModel;
 import mountains.view.MountainUI;
 
 
@@ -17,16 +17,18 @@ public class MountainStarter extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Mountain model = new Mountain();
+        MountainListModel model = new MountainListModel();
+
         Parent rootPanel = new MountainUI(model);
+
         Scene scene = new Scene(rootPanel);
 
-        /*CSS
+
         String stylesheet = getClass().getResource("style.css").toExternalForm();
         scene.getStylesheets().add(stylesheet);
-         */
 
-        primaryStage.titleProperty().bind(model.windowTitleProperty());
+
+        primaryStage.titleProperty().bind(model.applicationTitleProperty());
         primaryStage.setScene(scene);
 
         primaryStage.setWidth(900);

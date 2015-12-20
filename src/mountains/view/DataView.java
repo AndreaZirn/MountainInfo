@@ -7,11 +7,14 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import mountains.model.Mountain;
+import mountains.model.MountainListModel;
 
 /**
  * Created by andreazirn on 18/12/15.
  */
-public class DataView extends GridPane {
+public class DataView extends GridPane implements ViewMixin<MountainListModel> {
+    // Reference to the mountain list model
+    private final MountainListModel mountainlist;
 
 
     Label nameLabel;
@@ -40,12 +43,18 @@ public class DataView extends GridPane {
 
     private Mountain mountain;
 
-    public DataView(Mountain model) {
+    public DataView(MountainListModel mountainlist) {
+        this.mountainlist = mountainlist;
         initializeControls();
         layoutControls();
     }
 
-    private void initializeControls() {
+    @Override
+    public MountainListModel getPresentationModel() {
+        return mountainlist;
+    }
+    @Override
+    public void initializeControls() {
 
         setHgap(5);
         setVgap(20);
@@ -78,8 +87,8 @@ public class DataView extends GridPane {
 
     }
 
-
-    private void layoutControls() {
+    @Override
+    public void layoutControls() {
         //ColumnConstraints cc = new ColumnConstraints();
         //cc.setHgrow(Priority.ALWAYS);
         ColumnConstraints c1 = new ColumnConstraints();

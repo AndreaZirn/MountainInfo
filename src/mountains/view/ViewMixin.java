@@ -5,7 +5,7 @@ package mountains.view;
  */
 public interface ViewMixin <T> {
 
-    T getMountain();
+    T getPresentationModel();
 
     default void init() {
         initializeControls();

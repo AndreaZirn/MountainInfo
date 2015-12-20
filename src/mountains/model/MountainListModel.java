@@ -21,7 +21,6 @@ import java.util.stream.Stream;
  */
 public class MountainListModel {
 
-
     private static final String FILE_NAME = "data/mountains.csv";
 
     private final StringProperty applicationTitle = new SimpleStringProperty("Swiss Mountains");
@@ -88,15 +87,5 @@ public class MountainListModel {
     public ObservableList<Mountain> getMountain() {
         return mountain;
     }
-
-
-
-
-
-
-
-
-
-
 
 }
