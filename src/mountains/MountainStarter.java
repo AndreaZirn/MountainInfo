@@ -16,27 +16,26 @@ public class MountainStarter extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+            MountainListModel model = new MountainListModel();
 
-        MountainListModel model = new MountainListModel();
+            Parent rootPanel = new MountainUI(model);
 
-        Parent rootPanel = new MountainUI(model);
-
-        Scene scene = new Scene(rootPanel);
-
-
-        String stylesheet = getClass().getResource("style.css").toExternalForm();
-        scene.getStylesheets().add(stylesheet);
+            Scene scene = new Scene(rootPanel);
 
 
-        primaryStage.titleProperty().bind(model.applicationTitleProperty());
-        primaryStage.setScene(scene);
+        /*String stylesheet = getClass().getResource("style.css").toExternalForm();
+        scene.getStylesheets().add(stylesheet);*/
 
-        primaryStage.setWidth(900);
-        primaryStage.setHeight(750);
-        primaryStage.centerOnScreen();
 
-        primaryStage.show();
-    }
+            primaryStage.titleProperty().bind(model.applicationTitleProperty());
+            primaryStage.setScene(scene);
+
+            primaryStage.setWidth(900);
+            primaryStage.setHeight(750);
+            primaryStage.centerOnScreen();
+
+            primaryStage.show();
+        }
 
     public static void main(String[] args) {
         launch(args);
