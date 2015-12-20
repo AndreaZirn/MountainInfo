@@ -6,7 +6,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
 /**
@@ -41,7 +40,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     private TextField gebietField;
     private TextField bildunterschriftField;
 
-    private Mountain mountain;
 
     public DataView(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
