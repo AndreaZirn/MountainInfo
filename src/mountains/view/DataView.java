@@ -1,11 +1,14 @@
 package mountains.view;
 
+import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
+import javafx.util.converter.NumberStringConverter;
+import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
 /**
@@ -39,18 +42,20 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     private TextField kantonField;
     private TextField gebietField;
     private TextField bildunterschriftField;
+    private Mountain mountain;
 
 
     public DataView(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
-        initializeControls();
-        layoutControls();
+        init();
     }
 
     @Override
     public MountainListModel getPresentationModel() {
         return mountainlist;
     }
+
+
     @Override
     public void initializeControls() {
 
@@ -58,8 +63,9 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         setVgap(20);
         setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
 
+
         nameLabel = createLabel("Name:");
-        hoeheLabel= createLabel("Höhe:");
+        hoeheLabel = createLabel("Höhe:");
         dominanzLabel = createLabel("Dominanz:");
         kmBisLabel = createLabel("Km bis:");
         mBisLabel = createLabel("M bis:");
@@ -81,7 +87,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         kantonField = new TextField();
         gebietField = new TextField();
         bildunterschriftField = new TextField();
-
 
     }
 
@@ -146,4 +151,21 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         label.setMaxHeight(Double.MAX_VALUE);
         return label;
 }
-}
+
+    @Override
+    public void addBindings() {
+        Mountain mountainProxy = mountainlist.getMountainProxy();
+
+        nameField.textProperty().bindBidirectional(mountainProxy.nameProperty());
+        Bindings.bindBidirectional(hoeheField.textProperty(), mountainProxy.hoeheProperty(), new NumberStringConverter());
+        Bindings.bindBidirectional(dominanzField.textProperty(), mountainProxy.hoeheProperty(), new NumberStringConverter());
+        kmBisField.textProperty().bindBidirectional(mountainProxy.kmBisProperty());
+        mBisField.textProperty().bindBidirectional(mountainProxy.mBisProperty());
+        Bindings.bindBidirectional(schartenhoeheField.textProperty(), mountainProxy.schartenhoeheProperty(), new NumberStringConverter());
+        typField.textProperty().bindBidirectional(mountainProxy.typProperty());
+        regionField.textProperty().bindBidirectional(mountainProxy.regionProperty());
+        kantonField.textProperty().bindBidirectional(mountainProxy.nameProperty());
+        gebietField.textProperty().bindBidirectional(mountainProxy.nameProperty());
+        bildunterschriftField.textProperty().bindBidirectional(mountainProxy.nameProperty());
+        }
+    }

@@ -64,66 +64,19 @@
         <entry file="file://$PROJECT_DIR$/src/mountains/view/DataView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MountainStarter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MountainStarter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mountains/MountainStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6274834">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tableview.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43503937">
-              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplitLayout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mountains/view/SplitLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MountainListModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#2820#2821#0" expanded="true" />
-                <element signature="e#2865#2866#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +86,67 @@
         <entry file="file://$PROJECT_DIR$/src/mountains/model/Mountain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-              <folding />
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#3962#3963#0" expanded="true" />
+                <element signature="e#3995#3996#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MountainListModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.7777777">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3287#3288#0" expanded="true" />
+                <element signature="e#3326#3327#0" expanded="true" />
+                <element signature="e#3380#3381#0" expanded="true" />
+                <element signature="e#3412#3413#0" expanded="true" />
+                <element signature="e#3454#3455#0" expanded="true" />
+                <element signature="e#3490#3491#0" expanded="true" />
+                <element signature="e#11780#11781#0" expanded="true" />
+                <element signature="e#11822#11823#0" expanded="true" />
+                <element signature="e#11876#11877#0" expanded="true" />
+                <element signature="e#11912#11913#0" expanded="true" />
+                <element signature="e#11967#11968#0" expanded="true" />
+                <element signature="e#12020#12021#0" expanded="true" />
+                <element signature="e#12062#12063#0" expanded="true" />
+                <element signature="e#12109#12110#0" expanded="true" />
+                <element signature="e#12168#12169#0" expanded="true" />
+                <element signature="e#12209#12210#0" expanded="true" />
+                <element signature="e#12274#12275#0" expanded="true" />
+                <element signature="e#12337#12338#0" expanded="true" />
+                <element signature="e#12380#12381#0" expanded="true" />
+                <element signature="e#12425#12426#0" expanded="true" />
+                <element signature="e#12464#12465#0" expanded="true" />
+                <element signature="e#12505#12506#0" expanded="true" />
+                <element signature="e#12558#12559#0" expanded="true" />
+                <element signature="e#12593#12594#0" expanded="true" />
+                <element signature="e#12650#12651#0" expanded="true" />
+                <element signature="e#12701#12702#0" expanded="true" />
+                <element signature="e#12741#12742#0" expanded="true" />
+                <element signature="e#12782#12783#0" expanded="true" />
+                <element signature="e#12835#12836#0" expanded="true" />
+                <element signature="e#12870#12871#0" expanded="true" />
+                <element signature="e#12927#12928#0" expanded="true" />
+                <element signature="e#12978#12979#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Navigation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,14 +184,18 @@
         <option value="$PROJECT_DIR$/src/mountains/view/LayoutRight.java" />
         <option value="$PROJECT_DIR$/src/mountains/view/BorderLayout.java" />
         <option value="$PROJECT_DIR$/src/mountains/view/SplitLayout.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/Tableview.java" />
         <option value="$PROJECT_DIR$/src/mountains/model/Mountain.java" />
         <option value="$PROJECT_DIR$/src/mountains/view/MountainUI.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/Navigation.java" />
         <option value="$PROJECT_DIR$/src/mountains/view/ViewMixin.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/DataView.java" />
         <option value="$PROJECT_DIR$/src/mountains/MountainStarter.java" />
         <option value="$PROJECT_DIR$/out/production/MountainInfo/data/mountains.csv" />
+        <option value="$PROJECT_DIR$/src/mountains/model/Command.java" />
+        <option value="$PROJECT_DIR$/src/mountains/model/AddCommand.java" />
+        <option value="$PROJECT_DIR$/src/mountains/model/ValueChangeCommand.java" />
+        <option value="$PROJECT_DIR$/src/mountains/model/RemoveCommand.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/Tableview.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/DataView.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/Navigation.java" />
         <option value="$PROJECT_DIR$/src/mountains/model/MountainListModel.java" />
       </list>
     </option>
@@ -196,10 +212,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="3" />
+    <option name="x" value="14" />
     <option name="y" value="23" />
-    <option name="width" value="1391" />
-    <option name="height" value="857" />
+    <option name="width" value="1666" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -336,6 +352,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ressources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MountainInfo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -595,22 +659,22 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1391" height="857" extended-state="0" />
-    <editor active="false" />
+    <frame x="14" y="23" width="1666" height="975" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40186915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2762557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2965879" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23005033" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19867948" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29193038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,7 +735,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -680,62 +744,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/MountainUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/MountainStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#2820#2821#0" expanded="true" />
-            <element signature="e#2865#2866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mountains/model/Mountain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -778,10 +786,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,10 +796,38 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#2820#2821#0" expanded="true" />
-            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="e#3287#3288#0" expanded="true" />
+            <element signature="e#3326#3327#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+            <element signature="e#11780#11781#0" expanded="true" />
+            <element signature="e#11822#11823#0" expanded="true" />
+            <element signature="e#11876#11877#0" expanded="true" />
+            <element signature="e#11912#11913#0" expanded="true" />
+            <element signature="e#11967#11968#0" expanded="true" />
+            <element signature="e#12020#12021#0" expanded="true" />
+            <element signature="e#12062#12063#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12168#12169#0" expanded="true" />
+            <element signature="e#12209#12210#0" expanded="true" />
+            <element signature="e#12274#12275#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12380#12381#0" expanded="true" />
+            <element signature="e#12425#12426#0" expanded="true" />
+            <element signature="e#12464#12465#0" expanded="true" />
+            <element signature="e#12505#12506#0" expanded="true" />
+            <element signature="e#12558#12559#0" expanded="true" />
+            <element signature="e#12593#12594#0" expanded="true" />
+            <element signature="e#12650#12651#0" expanded="true" />
+            <element signature="e#12701#12702#0" expanded="true" />
+            <element signature="e#12741#12742#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+            <element signature="e#12835#12836#0" expanded="true" />
+            <element signature="e#12870#12871#0" expanded="true" />
+            <element signature="e#12927#12928#0" expanded="true" />
+            <element signature="e#12978#12979#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,10 +866,6 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,10 +917,6 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -944,10 +968,6 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -999,10 +1019,6 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1044,10 +1060,6 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1073,32 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ressources/data/cantons.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46296296">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/Pane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33167082">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4785021">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/ViewMixin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48128343">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1118,73 +1108,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/DataView.java">
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/ViewMixin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/MountainUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45335278">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/SplitLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/MountainStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/MountainInfo/data/mountains.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.11227545">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ressources/data/mountains.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.25">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
+    <entry file="file://$PROJECT_DIR$/ressources/data/cantons.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5681818">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20632738">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/AddCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49930653">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/RemoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41608876">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/ValueChangeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24965326">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33287102">
+          <caret line="39" column="79" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#2820#2821#0" expanded="true" />
-            <element signature="e#2865#2866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/MountainUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4965326">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/SplitLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14037433">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/javafx-src.zip!/javafx/beans/value/ObservableValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7107969">
+          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/DataView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1192,21 +1223,62 @@
     <entry file="file://$PROJECT_DIR$/src/mountains/model/Mountain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-          <folding />
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#3962#3963#0" expanded="true" />
+            <element signature="e#3995#3996#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43503937">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state vertical-scroll-proportion="-4.7777777">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#3287#3288#0" expanded="true" />
+            <element signature="e#3326#3327#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+            <element signature="e#11780#11781#0" expanded="true" />
+            <element signature="e#11822#11823#0" expanded="true" />
+            <element signature="e#11876#11877#0" expanded="true" />
+            <element signature="e#11912#11913#0" expanded="true" />
+            <element signature="e#11967#11968#0" expanded="true" />
+            <element signature="e#12020#12021#0" expanded="true" />
+            <element signature="e#12062#12063#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12168#12169#0" expanded="true" />
+            <element signature="e#12209#12210#0" expanded="true" />
+            <element signature="e#12274#12275#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12380#12381#0" expanded="true" />
+            <element signature="e#12425#12426#0" expanded="true" />
+            <element signature="e#12464#12465#0" expanded="true" />
+            <element signature="e#12505#12506#0" expanded="true" />
+            <element signature="e#12558#12559#0" expanded="true" />
+            <element signature="e#12593#12594#0" expanded="true" />
+            <element signature="e#12650#12651#0" expanded="true" />
+            <element signature="e#12701#12702#0" expanded="true" />
+            <element signature="e#12741#12742#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+            <element signature="e#12835#12836#0" expanded="true" />
+            <element signature="e#12870#12871#0" expanded="true" />
+            <element signature="e#12927#12928#0" expanded="true" />
+            <element signature="e#12978#12979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/MountainStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6274834">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

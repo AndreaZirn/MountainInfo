@@ -1,7 +1,8 @@
 package mountains.model;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.*;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -13,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,13 +26,216 @@ public class MountainListModel {
     private static final String FILE_NAME = "mountains.csv";
 
     private final StringProperty applicationTitle = new SimpleStringProperty("Swiss Mountains");
+    private final IntegerProperty selectedMountainId  = new SimpleIntegerProperty(-1);
+    private final IntegerProperty selectedIndex     = new SimpleIntegerProperty(-1);
+
+    private final ObservableList<Command> undoStack = FXCollections.observableArrayList();
+    private final ObservableList<Command> redoStack = FXCollections.observableArrayList();
+
+    private final BooleanProperty undoDisabled = new SimpleBooleanProperty();
+    private final BooleanProperty redoDisabled = new SimpleBooleanProperty();
 
     private final ObservableList<Mountain> mountains = FXCollections.observableArrayList();
+
+    private final Mountain mountainProxy = new Mountain();
+
+
+    private final ChangeListener<Object> propertyChangeListenerForUndoSupport = (observable, oldValue, newValue) -> {
+        redoStack.clear();
+        undoStack.add(0, new ValueChangeCommand(MountainListModel.this, (Property) observable, oldValue, newValue));
+    };
 
 
     public MountainListModel() {
         mountains.addAll(readFromFile());
+
+        undoDisabled.bind(Bindings.isEmpty(undoStack));
+        redoDisabled.bind(Bindings.isEmpty(redoStack));
+
+
+       selectedMountainIdProperty().addListener((observable1, oldId, newId) -> {
+            try {
+                setSelectedIndex(mountains.indexOf(getMountain((Integer) newId)));
+            } catch (Exception e) {
+                setSelectedIndex(-1);
+            }
+        });
+
+        selectedIndexProperty().addListener((observable1, oldValue1, newIndex) -> {
+            try {
+                setSelectedMountainId(mountains.get((Integer) newIndex).getId());
+            } catch (Exception e) {
+                setSelectedMountainId(-1);
+            }
+        });
+
+        //Selectionhandling
+        selectedMountainIdProperty().addListener((observable, oldValue, newValue) -> {
+                    Mountain oldSelection = getMountain((int) oldValue);
+                    Mountain newSelection = getMountain((int) newValue);
+
+                    if (oldSelection != null) {
+                        unbindFromProxy(oldSelection);
+                        disableUndoSupport(oldSelection);
+                    }
+
+                    if (newSelection != null) {
+                        bindToProxy(newSelection);
+                        enableUndoSupport(newSelection);
+                    }
+                }
+        );
+        setSelectedMountainId(0);
+
     }
+
+
+    public StringProperty applicationTitleProperty() {
+        return applicationTitle;
+    }
+
+    public ObservableList<Mountain> getMountains() {
+        return mountains;
+    }
+
+    public Mountain getMountainProxy() {
+        return mountainProxy;
+    }
+
+   private Mountain getMountain(int id) {
+        Optional<Mountain> pmOptional = mountains.stream()
+                .filter(mountain -> mountain.getId() == id)
+                .findAny();
+        return pmOptional.isPresent() ? pmOptional.get() : null;
+    }
+
+
+    public void addNewMountain() {
+        int newId = mountains.size();
+        Mountain newMountain = new Mountain();
+        newMountain.setId(newId);
+
+        addToList(newId-1, newMountain);
+
+        redoStack.clear();
+        undoStack.add(0, new AddCommand(this, newMountain, mountains.size() - 1));
+    }
+
+    public void removeMountain() {
+        Mountain toBeRemoved = getMountain(getSelectedMountainId());
+        int currentPosition = mountains.indexOf(toBeRemoved);
+
+        removeFromList(toBeRemoved);
+
+        redoStack.clear();
+        undoStack.add(0, new RemoveCommand(this, toBeRemoved, currentPosition));
+    }
+
+    public void setPropertyValue(Property property, Object newValue) {
+        property.removeListener(propertyChangeListenerForUndoSupport);
+        property.setValue(newValue);
+        property.addListener(propertyChangeListenerForUndoSupport);
+    }
+
+
+    public void addToList(int position, Mountain mountain){
+        mountains.add(position, mountain);
+        setSelectedMountainId(mountain.getId());
+    }
+
+    public void removeFromList(Mountain mountain){
+        unbindFromProxy(mountain);
+        disableUndoSupport(mountain);
+
+        mountains.remove(mountain);
+
+        if(!mountains.isEmpty()){
+            setSelectedMountainId(mountains.get(0).getId());
+        }
+    }
+
+    public void undo() {
+        if (undoStack.isEmpty()) {
+            return;
+        }
+        Command cmd = undoStack.get(0);
+        undoStack.remove(0);
+        redoStack.add(0, cmd);
+
+        cmd.undo();
+    }
+
+    public void redo() {
+        if (redoStack.isEmpty()) {
+            return;
+        }
+        Command cmd = redoStack.get(0);
+        redoStack.remove(0);
+        undoStack.add(0, cmd);
+
+        cmd.redo();
+    }
+
+    private void disableUndoSupport(Mountain mountain) {
+        mountain.idProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.nameProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.hoeheProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.dominanzProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.schartenhoeheProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.kmBisProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.mBisProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.typProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.regionProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.kantonProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.gebietProperty().removeListener(propertyChangeListenerForUndoSupport);
+        mountain.bildunterschriftProperty().removeListener(propertyChangeListenerForUndoSupport);
+    }
+
+    private void enableUndoSupport(Mountain mountain) {
+        mountain.idProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.nameProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.hoeheProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.dominanzProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.schartenhoeheProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.kmBisProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.mBisProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.typProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.regionProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.kantonProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.gebietProperty().addListener(propertyChangeListenerForUndoSupport);
+        mountain.bildunterschriftProperty().addListener(propertyChangeListenerForUndoSupport);
+    }
+
+    private void bindToProxy(Mountain mountain) {
+        mountainProxy.idProperty().bindBidirectional(mountain.idProperty());
+        mountainProxy.nameProperty().bindBidirectional(mountain.nameProperty());
+        mountainProxy.hoeheProperty().bindBidirectional(mountain.hoeheProperty());
+        mountainProxy.dominanzProperty().bindBidirectional(mountain.dominanzProperty());
+        mountainProxy.schartenhoeheProperty().bindBidirectional(mountain.schartenhoeheProperty());
+        mountainProxy.kmBisProperty().bindBidirectional(mountain.kmBisProperty());
+        mountainProxy.mBisProperty().bindBidirectional(mountain.mBisProperty());
+        mountainProxy.typProperty().bindBidirectional(mountain.typProperty());
+        mountainProxy.regionProperty().bindBidirectional(mountain.regionProperty());
+        mountainProxy.kantonProperty().bindBidirectional(mountain.kantonProperty());
+        mountainProxy.gebietProperty().bindBidirectional(mountain.gebietProperty());
+        mountainProxy.bildunterschriftProperty().bindBidirectional(mountain.bildunterschriftProperty());
+    }
+
+    private void unbindFromProxy(Mountain mountain) {
+        mountainProxy.idProperty().unbindBidirectional(mountain.idProperty());
+        mountainProxy.nameProperty().unbindBidirectional(mountain.nameProperty());
+        mountainProxy.hoeheProperty().unbindBidirectional(mountain.hoeheProperty());
+        mountainProxy.dominanzProperty().unbindBidirectional(mountain.dominanzProperty());
+        mountainProxy.schartenhoeheProperty().unbindBidirectional(mountain.schartenhoeheProperty());
+        mountainProxy.kmBisProperty().unbindBidirectional(mountain.kmBisProperty());
+        mountainProxy.mBisProperty().unbindBidirectional(mountain.mBisProperty());
+        mountainProxy.typProperty().unbindBidirectional(mountain.typProperty());
+        mountainProxy.regionProperty().unbindBidirectional(mountain.regionProperty());
+        mountainProxy.kantonProperty().unbindBidirectional(mountain.kantonProperty());
+        mountainProxy.gebietProperty().unbindBidirectional(mountain.gebietProperty());
+        mountainProxy.bildunterschriftProperty().unbindBidirectional(mountain.bildunterschriftProperty());
+    }
+
 
     public void save() {
         try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME, true))) {
@@ -48,6 +253,7 @@ public class MountainListModel {
             throw new IllegalStateException("save failed");
         }
     }
+
 
     private List<Mountain> readFromFile() {
         try (Stream<String> stream = getStreamOfLines(FILE_NAME)) {
@@ -78,16 +284,57 @@ public class MountainListModel {
         }
     }
 
+
+    public int getSelectedIndex() {
+        return selectedIndex.get();
+    }
+
+    public IntegerProperty selectedIndexProperty() {
+        return selectedIndex;
+    }
+
+    public void setSelectedIndex(int selectedIndex) {
+        this.selectedIndex.set(selectedIndex);
+    }
+
+    public int getSelectedMountainId() {
+        return selectedMountainId.get();
+    }
+
+    public IntegerProperty selectedMountainIdProperty() {
+        return selectedMountainId;
+    }
+
+    public void setSelectedMountainId(int selectedMountainId) {
+        this.selectedMountainId.set(selectedMountainId);
+    }
+
     public String getApplicationTitle() {
         return applicationTitle.get();
     }
-
-    public StringProperty applicationTitleProperty() {
-        return applicationTitle;
+    public boolean getUndoDisabled() {
+        return undoDisabled.get();
     }
 
-    public ObservableList<Mountain> getMountain() {
-        return mountains;
+    public BooleanProperty undoDisabledProperty() {
+        return undoDisabled;
     }
+
+    public void setUndoDisabled(boolean undoDisabled) {
+        this.undoDisabled.set(undoDisabled);
+    }
+
+    public boolean getRedoDisabled() {
+        return redoDisabled.get();
+    }
+
+    public BooleanProperty redoDisabledProperty() {
+        return redoDisabled;
+    }
+
+    public void setRedoDisabled(boolean redoDisabled) {
+        this.redoDisabled.set(redoDisabled);
+    }
+
 
 }

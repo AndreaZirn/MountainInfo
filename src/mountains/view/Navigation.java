@@ -12,17 +12,17 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
 
     private final MountainListModel mountainlist;
 
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private Button button5;
+    private Button addButton;
+    private Button deleteButton;
+    private Button redoButton;
+    private Button undoButton;
+    private Button saveButton;
 
     public Navigation(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
-        initializeControls();
-        layoutControls();  }
-
+        getStyleClass().add("buttonbar");
+        init();
+    }
 
     @Override
     public MountainListModel getPresentationModel() {
@@ -30,17 +30,45 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     }
     @Override
     public void initializeControls() {
-        button1 = new Button("add");
-        button2 = new Button("delete");
-        button3 = new Button("redo");
-        button4 = new Button("undo");
-        button5 = new Button("save");
+        addButton = new Button("add");
+        deleteButton = new Button("delete");
+        redoButton = new Button("redo");
+        undoButton = new Button("undo");
+        saveButton = new Button("save");
     }
 
     @Override
     public void layoutControls() {
         setPadding(new Insets(10));
         setSpacing(5);
-        getChildren().addAll(button1, button2, button3, button4, button5);
+        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton);
     }
+
+    @Override
+    public void addEventHandlers() {
+        undoButton.setOnAction(event -> mountainlist.undo());
+        redoButton.setOnAction(event -> mountainlist.redo());
+        addButton.setOnAction(event -> mountainlist.addNewMountain());
+        deleteButton.setOnAction(event -> mountainlist.removeMountain());
+        saveButton.setOnAction(event -> mountainlist.save());
+    }
+
+    @Override
+    public void addBindings() {
+        undoButton.disableProperty().bind(mountainlist.undoDisabledProperty());
+        redoButton.disableProperty().bind(mountainlist.redoDisabledProperty());
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

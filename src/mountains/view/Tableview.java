@@ -37,7 +37,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     }
 
     private TableView<Mountain> initializeMountainTabelle(){
-        TableView<Mountain> tableView = new TableView<>(mountainlist.getMountain());
+        TableView<Mountain> tableView = new TableView<>(mountainlist.getMountains());
 
         TableColumn<Mountain, Integer> idColumn = new TableColumn<>("ID");
         TableColumn<Mountain, String> nameColumn = new TableColumn<>("Name");
@@ -61,6 +61,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     }
     @Override
     public void addEventHandlers() {
+        mountainTable.getSelectionModel().selectedItemProperty().addListener((observable, oldMountain, newMountain) -> mountainlist.setSelectedMountainId(newMountain.getId()));
     }
     @Override
     public void addValueChangedListeners() {
