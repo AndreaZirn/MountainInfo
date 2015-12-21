@@ -21,22 +21,22 @@ import java.util.stream.Stream;
  */
 public class MountainListModel {
 
-    private static final String FILE_NAME = "ressources/data/mountains.csv";
+    private static final String FILE_NAME = "mountains.csv";
 
     private final StringProperty applicationTitle = new SimpleStringProperty("Swiss Mountains");
 
-    private final ObservableList<Mountain> mountain = FXCollections.observableArrayList();
+    private final ObservableList<Mountain> mountains = FXCollections.observableArrayList();
 
 
     public MountainListModel() {
-        mountain.addAll(readFromFile());
+        mountains.addAll(readFromFile());
     }
 
     public void save() {
-        try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME, false))) {
-            writer.write("ID\tName\tDominanz\tSchartenhoehe\tHoehe\tkm bis\tm bis\tTyp\tRegion\tKanton\tGebiet\tBildunterschrift");
+        try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME, true))) {
+            writer.write("ID;Name;Dominanz;Schartenhoehe;Hoehe;km bis;m bis;Typ;Region;Kanton;Gebiet;Bildunterschrift");
             writer.newLine();
-            mountain.stream().forEach(mountain -> {
+            mountains.stream().forEach(mountain -> {
                 try {
                     writer.write(mountain.infoAsLine());
                     writer.newLine();
@@ -59,7 +59,7 @@ public class MountainListModel {
 
     private Stream<String> getStreamOfLines(String fileName) {
         try {
-            return Files.lines(getPath(fileName, false), StandardCharsets.UTF_8);
+            return Files.lines(getPath(fileName, true), StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
@@ -69,8 +69,10 @@ public class MountainListModel {
         try {
             if(!locatedInSameFolder) {
                 fileName = "/" + fileName;
+            }else{
+                fileName = "data/" + FILE_NAME;
             }
-            return Paths.get(getClass().getResource(fileName).toURI());
+            return Paths.get(getClass().getClassLoader().getResource(fileName).toURI());
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(e);
         }
@@ -85,7 +87,7 @@ public class MountainListModel {
     }
 
     public ObservableList<Mountain> getMountain() {
-        return mountain;
+        return mountains;
     }
 
 }
