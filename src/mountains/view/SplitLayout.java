@@ -4,7 +4,7 @@ import javafx.scene.control.SplitPane;
 import mountains.model.MountainListModel;
 
 /**
- * Created by andreazirn on 18/12/15.
+ * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
 public class SplitLayout extends SplitPane implements ViewMixin<MountainListModel> {
 

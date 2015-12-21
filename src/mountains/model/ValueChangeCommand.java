@@ -3,7 +3,7 @@ package mountains.model;
 import javafx.beans.property.Property;
 
 /**
- * Created by andreazirn on 21/12/15.
+ * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
 public class ValueChangeCommand implements Command {
     private final MountainListModel mountainlist;

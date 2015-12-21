@@ -7,7 +7,6 @@ import java.io.BufferedWriter;
 
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
- * Model class for a Mountain
  */
 
 public class Mountain {
@@ -66,6 +65,7 @@ public class Mountain {
         setBildunterschrift(line[11]);
     }
 
+    //gleiche Reihenfolge wie oben bei "public Mountain (String..."
     public String infoAsLine() {
         StringBuffer info = new StringBuffer();
         info.append(getId() + ";");

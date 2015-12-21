@@ -1,7 +1,7 @@
 package mountains.model;
 
 /**
- * Created by andreazirn on 21/12/15.
+ * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
 public interface Command {
 
