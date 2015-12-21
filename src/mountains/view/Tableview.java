@@ -1,23 +1,29 @@
 package mountains.view;
 
 import javafx.beans.value.ChangeListener;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
+import mountains.view.Navigation;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
     private final MountainListModel mountainlist;
 
     private TableView<Mountain> mountainTable;
     private ChangeListener<Mountain> mountainChangeListener;
-
+   // private ObservableList<Mountain> masterData = FXCollections.observableArrayList();
 
     public Tableview(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
@@ -33,12 +39,13 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     public MountainListModel getPresentationModel() {
         return mountainlist;
     }
+
     @Override
     public void initializeControls() {
         mountainTable = initializeMountainTabelle();
     }
 
-    private TableView<Mountain> initializeMountainTabelle(){
+    private TableView<Mountain> initializeMountainTabelle() {
         TableView<Mountain> tableView = new TableView<>(mountainlist.getMountains());
 
         TableColumn<Mountain, Integer> idColumn = new TableColumn<>("ID");
@@ -51,9 +58,28 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
 
         tableView.getColumns().addAll(idColumn, nameColumn, hoeheColumn);
 
+    /*    FilteredList<Mountain> filteredData = new FilteredList<>(masterData, m -> true);
+
+      Navigation.getFilterField().textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(mountain -> {
+                // If filter text is empty, display all mountains.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true; // Filter matches name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        SortedList<Mountain> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
+        mountainTable.setItems(sortedData);*/
         return tableView;
     }
-
 
     @Override
     public void layoutControls() {
@@ -61,6 +87,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         getChildren().addAll(mountainTable);
 
     }
+
     @Override
     public void addEventHandlers() {
         mountainChangeListener = (observable, oldMountain, newMountain) -> mountainlist.setSelectedMountainId(newMountain.getId());
@@ -72,17 +99,17 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         mountainlist.selectedMountainIdProperty().addListener((observable, oldValue, newValue) -> {
             mountainTable.getSelectionModel().selectedItemProperty().removeListener(mountainChangeListener);
 
-            if((int)newValue == -1){
+            if ((int) newValue == -1) {
                 mountainTable.getSelectionModel().clearSelection();
-            }
-            else {
-                mountainTable.getSelectionModel().select(mountainlist.getMountain((int)newValue));
+            } else {
+                mountainTable.getSelectionModel().select(mountainlist.getMountain((int) newValue));
             }
 
             mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
 
         });
     }
+
     @Override
     public void addBindings() {
 

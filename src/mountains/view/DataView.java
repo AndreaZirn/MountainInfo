@@ -11,6 +11,7 @@ import javafx.util.converter.NumberStringConverter;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
+
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
@@ -43,7 +44,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     private TextField gebietField;
     private TextField bildunterschriftField;
     private Mountain mountain;
-
 
     public DataView(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;

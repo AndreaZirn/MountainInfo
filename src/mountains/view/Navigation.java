@@ -2,6 +2,7 @@ package mountains.view;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import mountains.model.MountainListModel;
 
@@ -17,6 +18,7 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     private Button redoButton;
     private Button undoButton;
     private Button saveButton;
+    private TextField filterField;
 
     public Navigation(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
@@ -35,13 +37,14 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
         redoButton = new Button("redo");
         undoButton = new Button("undo");
         saveButton = new Button("save");
+        filterField = new TextField("search");
     }
 
     @Override
     public void layoutControls() {
         setPadding(new Insets(10));
-        setSpacing(5);
-        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton);
+        setSpacing(6);
+        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton, filterField);
     }
 
     @Override
@@ -60,15 +63,7 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
+    public TextField getFilterField() {
+        return filterField;
+    }
 }
