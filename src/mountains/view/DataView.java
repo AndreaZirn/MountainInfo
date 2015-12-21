@@ -164,8 +164,8 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         Bindings.bindBidirectional(schartenhoeheField.textProperty(), mountainProxy.schartenhoeheProperty(), new NumberStringConverter());
         typField.textProperty().bindBidirectional(mountainProxy.typProperty());
         regionField.textProperty().bindBidirectional(mountainProxy.regionProperty());
-        kantonField.textProperty().bindBidirectional(mountainProxy.nameProperty());
-        gebietField.textProperty().bindBidirectional(mountainProxy.nameProperty());
-        bildunterschriftField.textProperty().bindBidirectional(mountainProxy.nameProperty());
+        kantonField.textProperty().bindBidirectional(mountainProxy.kantonProperty());
+        gebietField.textProperty().bindBidirectional(mountainProxy.gebietProperty());
+        bildunterschriftField.textProperty().bindBidirectional(mountainProxy.bildunterschriftProperty());
         }
     }
