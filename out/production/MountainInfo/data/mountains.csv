@@ -1,12 +1,7 @@
-0;Albis, Bürglen;916.0;Hauptgipfel;Mittelland;;Albiskette;12.0;Wilerberg;376.0;Sihlbrugg Punkt 540;Albiskette vom Uetliberg;
-1;Aletschhorn;4193.0;Hauptgipfel;Wallis;;Aletschgebiet;13.3;Finsteraarhorn;1020.0;Lötschenlücke;Aletschhorn von Süden;
-2;Allalinhorn;4027.0;Nebengipfel;Walliser Alpen;;;2.1;Rimpfischhorn;255.0;Alphubeljoch;Allalinhorn von Nordost;
-3;Alperschällihorn;3036.0;Hauptgipfel;Adula-Alpen;;Splügener Kalkberge;4.9;Bruschghorn;425.0;Alperschällilücke;Alperschällihorn von Osten;
-4;Alphubel;4206.0;Hauptgipfel;Wallis;;Mischabel-Gruppe;2.1;Täschhorn;359.0;Mischabeljoch;Alphubel vom Allalinhorn;
+ID;Name;Dominanz;Schartenhoehe;Hoehe;km bis;m bis;Typ;Region;Kanton;Gebiet;Bildunterschrift
 5;Altels;3629.0;Nebengipfel;Berner Alpen;;Balmhorngruppe;1.27;Balmhorn;101.0;Punkt 3528 E zum Balmhorn;Altels;
 6;Altenalptürm;2033.0;Nebengipfel;Ostschweiz;;Alpstein;0.43;Hängeten;133.0;Lötzlialpsattel;Altenalp Türm von Westen;
 7;Altmann;2436.0;Hauptgipfel;Ostschweiz;;Alpstein;2.45;Säntis;315.0;Rotsteinpass;über dem Seealpsee, Altmann links;
-8;Alvier;2343.0;Nebengipfel;Ostschweiz;;Alvierkette;2.62;Gross-Fulfirst;243.0;Punkt 2100;Alvier 2ter von rechts;
 9;Aubrig;1695.0;Hauptgipfel;Schwyz;;Schwyzer Alpen;6.28;Fluebrig;327.0;Fläschlihöchi;Aubrig;
 10;Bächenstock;2944.0;Nebengipfel;Urner Alpen;;Diederberge;0.6;Rienzenstock;53.0;Punkt 2891;Bächenstock von der Fellilücke;
 11;Bachtel;1115.0;Hauptgipfel;Mittelland;;Zürcher Oberland;4.7;Dürrspitz;358.0;Gibswil;Bachtel vom Pfäffikersee;
@@ -229,4 +224,4 @@
 228;Zinalrothorn;4221.0;Hauptgipfel;Walliser Alpen;;;4.5;Weisshorn;490.0;Hohlichtpass;Zinalrothorn;
 229;Zindlenspitz;2097.0;Nebengipfel;Glarner Alpen;;;1.3;Brünnelistock;195.0;Punkt 1902 Rossalpeli;Zindlenspitz von Norden;
 230;Zuestoll;2235.0;Nebengipfel;Walensee;;Churfirsten;0.63;Brisi;225.0;Paliis Nideri;Zuestoll dritter von links;
-231;Zumsteinspitze;4563.0;Nebengipfel;Wallis/Italien;;Monte Rosa;0.8;Dufourspitze;110.0;Grenzsattel;Zumsteinspitze vom Nordend;
+231;null;0.0;null;null;null;null;0.0;null;0.0;null;null;

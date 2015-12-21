@@ -22,7 +22,7 @@ public class AddCommand implements Command {
 
     @Override
     public void redo() {
-        mountainlist.addToList(position, added);
+        mountainlist.addToList(added);
 
     }
 }

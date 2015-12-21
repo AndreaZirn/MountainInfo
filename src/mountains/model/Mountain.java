@@ -3,6 +3,8 @@ package mountains.model;
 
 import javafx.beans.property.*;
 
+import java.io.BufferedWriter;
+
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  * Model class for a Mountain
@@ -28,22 +30,6 @@ public class Mountain {
     public Mountain() {
     }
 
-    //Reihenfolge nach Spalten in csv-Datei
-    public Mountain(String[] line) {
-        setId(Integer.valueOf(line[0]));
-        setName(line[1]);
-        setHoehe(Double.valueOf(line[2]));
-        setTyp(line[3]);
-        setRegion(line[4]);
-        setKanton(line[5]); //in mountain.csv ist diese Zeile leer. Evtl. Kantone einf�gen?
-        setGebiet(line[6]);
-        setDominanz(Double.valueOf(line[7]));
-        setKmBis(line[8]);
-        setSchartenhoehe(Double.valueOf(line[9]));
-        setmBis(line[10]);
-        setBildunterschrift(line[11]);
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -64,22 +50,40 @@ public class Mountain {
         return id.hashCode();
     }
 
-    public String infoAsLine() {
-        return String.join("\t",
-                Integer.toString(getId()),
-                Double.toString(getHoehe()),
-                getName(),
-                Double.toString(getDominanz()),
-                Double.toString(getSchartenhoehe()),
-                getKmBis(),
-                getmBis(),
-                getTyp(),
-                getRegion(),
-                getKanton(),
-                getGebiet(),
-                getBildunterschrift()
-        );
+    //Reihenfolge nach Spalten in csv-Datei
+    public Mountain(String[] line) {
+        setId(Integer.valueOf(line[0]));
+        setName(line[1]);
+        setHoehe(Double.valueOf(line[2]));
+        setTyp(line[3]);
+        setRegion(line[4]);
+        setKanton(line[5]); //in mountain.csv ist diese Zeile leer. Evtl. Kantone einf�gen?
+        setGebiet(line[6]);
+        setDominanz(Double.valueOf(line[7]));
+        setKmBis(line[8]);
+        setSchartenhoehe(Double.valueOf(line[9]));
+        setmBis(line[10]);
+        setBildunterschrift(line[11]);
     }
+
+    public String infoAsLine() {
+        StringBuffer info = new StringBuffer();
+        info.append(getId() + ";");
+        info.append(getName() + ";");
+        info.append(getHoehe() + ";");
+        info.append(getTyp() + ";");
+        info.append(getRegion() + ";");
+        info.append(getKanton() + ";");
+        info.append(getGebiet() + ";");
+        info.append(getDominanz() + ";");
+        info.append(getKmBis() + ";");
+        info.append(getSchartenhoehe() + ";");
+        info.append(getmBis() + ";");
+        info.append(getBildunterschrift() + ";");
+
+        return info.toString();
+           }
+
     //getter und setter
 
     public String getName() {

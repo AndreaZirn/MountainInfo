@@ -111,11 +111,16 @@ public class MountainListModel {
 
 
     public void addNewMountain() {
-        int newId = mountains.size();
+        int newId = mountains.stream()
+            .map(m -> {return m.getId();})
+            .max((id1, id2) -> { return id1.compareTo(id2); })
+            .get();
+        newId = newId +1;
+
         Mountain newMountain = new Mountain();
         newMountain.setId(newId);
 
-        addToList(newId-1, newMountain);
+        addToList(newMountain);
 
         redoStack.clear();
         undoStack.add(0, new AddCommand(this, newMountain, mountains.size() - 1));
@@ -138,8 +143,8 @@ public class MountainListModel {
     }
 
 
-    public void addToList(int position, Mountain mountain){
-        mountains.add(position, mountain);
+    public void addToList(Mountain mountain){
+        mountains.add(mountain);
         setSelectedMountainId(mountain.getId());
     }
 
