@@ -1,5 +1,6 @@
 package mountains.view;
 
+import javafx.beans.value.ChangeListener;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Priority;
@@ -15,6 +16,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     private final MountainListModel mountainlist;
 
     private TableView<Mountain> mountainTable;
+    private ChangeListener<Mountain> mountainChangeListener;
 
 
     public Tableview(MountainListModel mountainlist) {
@@ -61,10 +63,25 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     }
     @Override
     public void addEventHandlers() {
-        mountainTable.getSelectionModel().selectedItemProperty().addListener((observable, oldMountain, newMountain) -> mountainlist.setSelectedMountainId(newMountain.getId()));
+        mountainChangeListener = (observable, oldMountain, newMountain) -> mountainlist.setSelectedMountainId(newMountain.getId());
+        mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
     }
+
     @Override
     public void addValueChangedListeners() {
+        mountainlist.selectedMountainIdProperty().addListener((observable, oldValue, newValue) -> {
+            mountainTable.getSelectionModel().selectedItemProperty().removeListener(mountainChangeListener);
+
+            if((int)newValue == -1){
+                mountainTable.getSelectionModel().clearSelection();
+            }
+            else {
+                mountainTable.getSelectionModel().select(mountainlist.getMountain((int)newValue));
+            }
+
+            mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
+
+        });
     }
     @Override
     public void addBindings() {

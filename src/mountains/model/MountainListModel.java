@@ -102,7 +102,7 @@ public class MountainListModel {
         return mountainProxy;
     }
 
-   private Mountain getMountain(int id) {
+   public Mountain getMountain(int id) {
         Optional<Mountain> pmOptional = mountains.stream()
                 .filter(mountain -> mountain.getId() == id)
                 .findAny();
@@ -134,6 +134,7 @@ public class MountainListModel {
 
         redoStack.clear();
         undoStack.add(0, new RemoveCommand(this, toBeRemoved, currentPosition));
+        setSelectedMountainId(mountains.get(0).getId());
     }
 
     public void setPropertyValue(Property property, Object newValue) {
@@ -262,7 +263,7 @@ public class MountainListModel {
 
     private List<Mountain> readFromFile() {
         try (Stream<String> stream = getStreamOfLines(FILE_NAME)) {
-            return stream.skip(1)                              // erste Zeile ist die Headerzeile; ueberspringen
+            return stream
                     .map(s -> new Mountain(s.split(";")))      // aus jeder Zeile ein Objekt machen
                     .collect(Collectors.toList());            // alles aufsammeln
         }
