@@ -7,6 +7,7 @@ package mountains;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import mountains.model.MountainListModel;
 import mountains.view.MountainUI;
@@ -26,6 +27,8 @@ public class MountainStarter extends Application {
         /*String stylesheet = getClass().getResource("style.css").toExternalForm();
         scene.getStylesheets().add(stylesheet);*/
 
+        
+            primaryStage.getIcons().add(new Image("wappen/wappen_gross/switzerland.png"));
 
             primaryStage.titleProperty().bind(model.applicationTitleProperty());
             primaryStage.setScene(scene);
