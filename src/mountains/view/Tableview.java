@@ -1,17 +1,13 @@
 package mountains.view;
 
 import javafx.beans.value.ChangeListener;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
-import mountains.view.Navigation;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
+
 
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
@@ -23,7 +19,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
 
     private TableView<Mountain> mountainTable;
     private ChangeListener<Mountain> mountainChangeListener;
-   // private ObservableList<Mountain> masterData = FXCollections.observableArrayList();
+
 
     public Tableview(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
@@ -58,27 +54,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
 
         tableView.getColumns().addAll(idColumn, nameColumn, hoeheColumn);
 
-    /*    FilteredList<Mountain> filteredData = new FilteredList<>(masterData, m -> true);
-
-      Navigation.getFilterField().textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(mountain -> {
-                // If filter text is empty, display all mountains.
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-                String lowerCaseFilter = newValue.toLowerCase();
-
-                if (mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
-                    return true; // Filter matches name.
-                }
-                return false; // Does not match.
-            });
-        });
-
-        SortedList<Mountain> sortedData = new SortedList<>(filteredData);
-        sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
-        mountainTable.setItems(sortedData);*/
-        return tableView;
+      return tableView;
     }
 
     @Override
