@@ -5,6 +5,9 @@ import javafx.beans.property.*;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
+import mountains.view.Navigation;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -36,6 +39,8 @@ public class MountainListModel {
     private final BooleanProperty redoDisabled = new SimpleBooleanProperty();
 
     private final ObservableList<Mountain> mountains = FXCollections.observableArrayList();
+
+    private ObservableList<Mountain> masterData = FXCollections.observableArrayList();
 
     private final Mountain mountainProxy = new Mountain();
 
@@ -259,8 +264,38 @@ public class MountainListModel {
             throw new IllegalStateException("save failed");
         }
     }
+/*
+        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
+        FilteredList<Mountain> filteredData = new FilteredList<>(masterData, m -> true);
 
+        // 2. Set the filter Predicate whenever the filter changes.
+        filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(mountain -> {
+                // If filter text is empty, display all mountains.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
 
+                // Compare name of every mountain with filter text.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true; // Filter matches name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        // 3. Wrap the FilteredList in a SortedList.
+        SortedList<Mountain> sortedData = new SortedList<>(filteredData);
+
+        // 4. Bind the SortedList comparator to the TableView comparator.
+        sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
+
+        // 5. Add sorted (and filtered) data to the table.
+        mountainTable.setItems(sortedData);
+
+*/
     private List<Mountain> readFromFile() {
         try (Stream<String> stream = getStreamOfLines(FILE_NAME)) {
             return stream
