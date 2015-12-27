@@ -63,52 +63,17 @@
       <file leaf-file-name="Tableview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.1450512">
               <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="0.6561403">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+>>>>>>> parent of 2b97fdb... deleted some code
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MountainListModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3380#3381#0" expanded="true" />
-                <element signature="e#3412#3413#0" expanded="true" />
-                <element signature="e#3454#3455#0" expanded="true" />
-                <element signature="e#3490#3491#0" expanded="true" />
-                <element signature="e#11870#11871#0" expanded="true" />
-                <element signature="e#11912#11913#0" expanded="true" />
-                <element signature="e#11966#11967#0" expanded="true" />
-                <element signature="e#12002#12003#0" expanded="true" />
-                <element signature="e#12057#12058#0" expanded="true" />
-                <element signature="e#12110#12111#0" expanded="true" />
-                <element signature="e#12152#12153#0" expanded="true" />
-                <element signature="e#12199#12200#0" expanded="true" />
-                <element signature="e#12258#12259#0" expanded="true" />
-                <element signature="e#12299#12300#0" expanded="true" />
-                <element signature="e#12364#12365#0" expanded="true" />
-                <element signature="e#12427#12428#0" expanded="true" />
-                <element signature="e#12470#12471#0" expanded="true" />
-                <element signature="e#12515#12516#0" expanded="true" />
-                <element signature="e#12554#12555#0" expanded="true" />
-                <element signature="e#12595#12596#0" expanded="true" />
-                <element signature="e#12648#12649#0" expanded="true" />
-                <element signature="e#12683#12684#0" expanded="true" />
-                <element signature="e#12740#12741#0" expanded="true" />
-                <element signature="e#12791#12792#0" expanded="true" />
-                <element signature="e#12831#12832#0" expanded="true" />
-                <element signature="e#12872#12873#0" expanded="true" />
-                <element signature="e#12925#12926#0" expanded="true" />
-                <element signature="e#12960#12961#0" expanded="true" />
-                <element signature="e#13017#13018#0" expanded="true" />
-                <element signature="e#13068#13069#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1435#1436#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,11 +83,13 @@
         <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#2052#2053#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,10 +137,10 @@
         <option value="$PROJECT_DIR$/src/mountains/model/AddCommand.java" />
         <option value="$PROJECT_DIR$/src/mountains/model/Mountain.java" />
         <option value="$PROJECT_DIR$/src/mountains/MountainStarter.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/DataView.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/Tableview.java" />
-        <option value="$PROJECT_DIR$/src/mountains/view/Navigation.java" />
         <option value="$PROJECT_DIR$/src/mountains/model/MountainListModel.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/DataView.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/Navigation.java" />
+        <option value="$PROJECT_DIR$/src/mountains/view/Tableview.java" />
       </list>
     </option>
   </component>
@@ -189,10 +156,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1046" />
+    <option name="x" value="-118" />
+    <option name="y" value="10" />
+    <option name="width" value="1438" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -338,7 +305,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+      <pane id="Scope" />
+>>>>>>> parent of 2b97fdb... deleted some code
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,21 +559,29 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
+    <frame x="-118" y="10" width="1438" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27433628" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27437642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of 2b97fdb... deleted some code
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3108407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3117914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of 2b97fdb... deleted some code
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21197917" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2874294" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29193038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -664,7 +643,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -673,6 +652,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/mountains/view/DataView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mountains/MountainStarter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -699,36 +688,6 @@
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3412#3413#0" expanded="true" />
-            <element signature="e#3454#3455#0" expanded="true" />
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#11870#11871#0" expanded="true" />
-            <element signature="e#11912#11913#0" expanded="true" />
-            <element signature="e#11966#11967#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12057#12058#0" expanded="true" />
-            <element signature="e#12110#12111#0" expanded="true" />
-            <element signature="e#12152#12153#0" expanded="true" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12258#12259#0" expanded="true" />
-            <element signature="e#12299#12300#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12427#12428#0" expanded="true" />
-            <element signature="e#12470#12471#0" expanded="true" />
-            <element signature="e#12515#12516#0" expanded="true" />
-            <element signature="e#12554#12555#0" expanded="true" />
-            <element signature="e#12595#12596#0" expanded="true" />
-            <element signature="e#12648#12649#0" expanded="true" />
-            <element signature="e#12683#12684#0" expanded="true" />
-            <element signature="e#12740#12741#0" expanded="true" />
-            <element signature="e#12791#12792#0" expanded="true" />
-            <element signature="e#12831#12832#0" expanded="true" />
-            <element signature="e#12872#12873#0" expanded="true" />
-            <element signature="e#12925#12926#0" expanded="true" />
-            <element signature="e#12960#12961#0" expanded="true" />
-            <element signature="e#13017#13018#0" expanded="true" />
-            <element signature="e#13068#13069#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,8 +698,6 @@
           <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -770,9 +727,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,6 +750,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,36 +762,6 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3412#3413#0" expanded="true" />
-            <element signature="e#3454#3455#0" expanded="true" />
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#11870#11871#0" expanded="true" />
-            <element signature="e#11912#11913#0" expanded="true" />
-            <element signature="e#11966#11967#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12057#12058#0" expanded="true" />
-            <element signature="e#12110#12111#0" expanded="true" />
-            <element signature="e#12152#12153#0" expanded="true" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12258#12259#0" expanded="true" />
-            <element signature="e#12299#12300#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12427#12428#0" expanded="true" />
-            <element signature="e#12470#12471#0" expanded="true" />
-            <element signature="e#12515#12516#0" expanded="true" />
-            <element signature="e#12554#12555#0" expanded="true" />
-            <element signature="e#12595#12596#0" expanded="true" />
-            <element signature="e#12648#12649#0" expanded="true" />
-            <element signature="e#12683#12684#0" expanded="true" />
-            <element signature="e#12740#12741#0" expanded="true" />
-            <element signature="e#12791#12792#0" expanded="true" />
-            <element signature="e#12831#12832#0" expanded="true" />
-            <element signature="e#12872#12873#0" expanded="true" />
-            <element signature="e#12925#12926#0" expanded="true" />
-            <element signature="e#12960#12961#0" expanded="true" />
-            <element signature="e#13017#13018#0" expanded="true" />
-            <element signature="e#13068#13069#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -852,9 +781,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -875,6 +804,8 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -901,9 +832,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -924,6 +855,8 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -950,9 +883,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -973,6 +906,8 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -999,9 +934,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1022,6 +957,8 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,9 +985,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1061,6 +998,8 @@
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1119,6 +1058,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/Mountain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mountains/model/AddCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1131,6 +1080,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,9 +1096,9 @@
         <state vertical-scroll-proportion="0.29411766">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1157,6 +1107,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4754386">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1173,82 +1133,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/model/Mountain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.334471">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327645">
-          <caret line="2866" column="18" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mountains/model/MountainListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3412#3413#0" expanded="true" />
-            <element signature="e#3454#3455#0" expanded="true" />
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#11870#11871#0" expanded="true" />
-            <element signature="e#11912#11913#0" expanded="true" />
-            <element signature="e#11966#11967#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12057#12058#0" expanded="true" />
-            <element signature="e#12110#12111#0" expanded="true" />
-            <element signature="e#12152#12153#0" expanded="true" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12258#12259#0" expanded="true" />
-            <element signature="e#12299#12300#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12427#12428#0" expanded="true" />
-            <element signature="e#12470#12471#0" expanded="true" />
-            <element signature="e#12515#12516#0" expanded="true" />
-            <element signature="e#12554#12555#0" expanded="true" />
-            <element signature="e#12595#12596#0" expanded="true" />
-            <element signature="e#12648#12649#0" expanded="true" />
-            <element signature="e#12683#12684#0" expanded="true" />
-            <element signature="e#12740#12741#0" expanded="true" />
-            <element signature="e#12791#12792#0" expanded="true" />
-            <element signature="e#12831#12832#0" expanded="true" />
-            <element signature="e#12872#12873#0" expanded="true" />
-            <element signature="e#12925#12926#0" expanded="true" />
-            <element signature="e#12960#12961#0" expanded="true" />
-            <element signature="e#13017#13018#0" expanded="true" />
-            <element signature="e#13068#13069#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mountains/view/Navigation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
             <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mountains/view/Tableview.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.1450512">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.6561403">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+>>>>>>> parent of 2b97fdb... deleted some code
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>

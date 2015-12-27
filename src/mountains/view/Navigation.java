@@ -62,4 +62,8 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
         redoButton.disableProperty().bind(mountainlist.redoDisabledProperty());
     }
 
+
+    public TextField getFilterField() {
+        return filterField;
+    }
 }
