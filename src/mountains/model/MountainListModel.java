@@ -53,7 +53,7 @@ public class MountainListModel {
         redoDisabled.bind(Bindings.isEmpty(redoStack));
 
 
-       selectedMountainIdProperty().addListener((observable1, oldId, newId) -> {
+        selectedMountainIdProperty().addListener((observable1, oldId, newId) -> {
             try {
                 setSelectedIndex(mountains.indexOf(getMountain((Integer) newId)));
             } catch (Exception e) {
@@ -102,7 +102,7 @@ public class MountainListModel {
         return mountainProxy;
     }
 
-   public Mountain getMountain(int id) {
+    public Mountain getMountain(int id) {
         Optional<Mountain> pmOptional = mountains.stream()
                 .filter(mountain -> mountain.getId() == id)
                 .findAny();
@@ -112,9 +112,9 @@ public class MountainListModel {
 
     public void addNewMountain() {
         int newId = mountains.stream()
-            .map(m -> {return m.getId();})
-            .max((id1, id2) -> { return id1.compareTo(id2); })
-            .get();
+                .map(m -> {return m.getId();})
+                .max((id1, id2) -> { return id1.compareTo(id2); })
+                .get();
         newId = newId +1;
 
         Mountain newMountain = new Mountain();

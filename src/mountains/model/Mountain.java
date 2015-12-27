@@ -3,7 +3,6 @@ package mountains.model;
 
 import javafx.beans.property.*;
 
-import java.io.BufferedWriter;
 
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
@@ -56,7 +55,7 @@ public class Mountain {
         setHoehe(Double.valueOf(line[2]));
         setTyp(line[3]);
         setRegion(line[4]);
-        setKanton(line[5]); //in mountain.csv ist diese Zeile leer. Evtl. Kantone einf�gen?
+        setKanton(line[5]); //TODO in mountain.csv ist diese Zeile leer. Evtl. Kantone einf�gen?
         setGebiet(line[6]);
         setDominanz(Double.valueOf(line[7]));
         setKmBis(line[8]);
@@ -82,7 +81,7 @@ public class Mountain {
         info.append(getBildunterschrift() + ";");
 
         return info.toString();
-           }
+    }
 
     //getter und setter
 
