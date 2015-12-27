@@ -12,8 +12,9 @@ public class SplitLayout extends SplitPane implements ViewMixin<MountainListMode
 
     public SplitLayout(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
-        initializeControls();
-        layoutControls();  }
+        init();
+    }
+
 
     @Override
     public MountainListModel getPresentationModel() {
@@ -24,7 +25,7 @@ public class SplitLayout extends SplitPane implements ViewMixin<MountainListMode
     }
     @Override
     public void layoutControls() {
-        setDividerPosition(1,0);
+        setDividerPositions(0.29, 0.6);
     }
 }
 

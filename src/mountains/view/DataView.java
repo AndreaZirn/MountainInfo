@@ -59,7 +59,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     @Override
     public void initializeControls() {
 
-        setHgap(5);
+        //setHgap(5);
         setVgap(20);
         setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
 
@@ -97,12 +97,14 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         ColumnConstraints c1 = new ColumnConstraints();
         c1.setPercentWidth(20);
         ColumnConstraints c2 = new ColumnConstraints();
-        c2.setPercentWidth(30);
+        c2.setPercentWidth(28);
         ColumnConstraints c3 = new ColumnConstraints();
-        c3.setPercentWidth(20);
+        c3.setPercentWidth(4);
         ColumnConstraints c4 = new ColumnConstraints();
-        c4.setPercentWidth(30);
-        getColumnConstraints().addAll(c1, c2, c3, c4);
+        c4.setPercentWidth(20);
+        ColumnConstraints c5 = new ColumnConstraints();
+        c5.setPercentWidth(28);
+        getColumnConstraints().addAll(c1, c2, c3, c4, c5);
 
 
         //RowConstraints rc = new RowConstraints();
@@ -119,27 +121,27 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
         //TODO: +. Reihe mit Bild
         add(nameLabel, 0, 1);
-        add(hoeheLabel, 2, 1);
+        add(hoeheLabel, 3, 1);
         add(dominanzLabel, 0, 2);
-        add(kmBisLabel, 2, 2);
+        add(kmBisLabel, 3, 2);
         add(mBisLabel, 0, 3);
-        add(schartenhoeheLabel, 2, 3);
+        add(schartenhoeheLabel, 3, 3);
         add(typLabel, 0, 4);
-        add(regionLabel, 2, 4);
+        add(regionLabel, 3, 4);
         add(kantonLabel, 0, 5);
-        add(gebietLabel, 2, 5);
+        add(gebietLabel, 3, 5);
         add(bildunterschriftLabel, 0, 6);
 
         add(nameField, 1, 1);
-        add(hoeheField, 3, 1);
+        add(hoeheField, 4, 1);
         add(dominanzField, 1, 2);
-        add(kmBisField, 3, 2);
+        add(kmBisField, 4, 2);
         add(mBisField, 1, 3);
-        add(schartenhoeheField, 3, 3);
+        add(schartenhoeheField, 4, 3);
         add(typField, 1, 4);
-        add(regionField, 3, 4);
+        add(regionField, 4, 4);
         add(kantonField, 1, 5);
-        add(gebietField, 3, 5);
+        add(gebietField, 4, 5);
         add(bildunterschriftField, 1, 6, 3, 1); //colIndex, rowIndex, colSpan, rowSpan
 
 
@@ -147,8 +149,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
     private Label createLabel(String text){
         Label label = new Label(text);
-        label.setMaxWidth(Double.MAX_VALUE);
-        label.setMaxHeight(Double.MAX_VALUE);
         return label;
 }
 
@@ -168,4 +168,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         gebietField.textProperty().bindBidirectional(mountainProxy.gebietProperty());
         bildunterschriftField.textProperty().bindBidirectional(mountainProxy.bildunterschriftProperty());
         }
-    }
+
+
+}
