@@ -25,7 +25,7 @@ public class MountainListModel {
 
     private static final String FILE_NAME = "mountains.csv";
 
-    private final StringProperty applicationTitle = new SimpleStringProperty("Swiss Mountains");
+    private final StringProperty applicationTitle = new SimpleStringProperty("Schweizer Berge");
     private final IntegerProperty selectedMountainId  = new SimpleIntegerProperty(-1);
     private final IntegerProperty selectedIndex     = new SimpleIntegerProperty(-1);
 
@@ -183,6 +183,9 @@ public class MountainListModel {
     }
 
     private void disableUndoSupport(Mountain mountain) {
+        //ImageHandling
+        mountain.imagePropertyProperty().removeListener(propertyChangeListenerForUndoSupport);
+
         mountain.idProperty().removeListener(propertyChangeListenerForUndoSupport);
         mountain.nameProperty().removeListener(propertyChangeListenerForUndoSupport);
         mountain.hoeheProperty().removeListener(propertyChangeListenerForUndoSupport);
@@ -198,6 +201,9 @@ public class MountainListModel {
     }
 
     private void enableUndoSupport(Mountain mountain) {
+        //ImageHandling
+        mountain.imagePropertyProperty().addListener(propertyChangeListenerForUndoSupport);
+
         mountain.idProperty().addListener(propertyChangeListenerForUndoSupport);
         mountain.nameProperty().addListener(propertyChangeListenerForUndoSupport);
         mountain.hoeheProperty().addListener(propertyChangeListenerForUndoSupport);
@@ -213,6 +219,9 @@ public class MountainListModel {
     }
 
     private void bindToProxy(Mountain mountain) {
+        //ImageHandling
+        mountainProxy.imagePropertyProperty().bindBidirectional(mountain.imagePropertyProperty());
+
         mountainProxy.idProperty().bindBidirectional(mountain.idProperty());
         mountainProxy.nameProperty().bindBidirectional(mountain.nameProperty());
         mountainProxy.hoeheProperty().bindBidirectional(mountain.hoeheProperty());
@@ -228,6 +237,9 @@ public class MountainListModel {
     }
 
     private void unbindFromProxy(Mountain mountain) {
+        //ImageHandling
+        mountainProxy.imagePropertyProperty().unbindBidirectional(mountain.imagePropertyProperty());
+
         mountainProxy.idProperty().unbindBidirectional(mountain.idProperty());
         mountainProxy.nameProperty().unbindBidirectional(mountain.nameProperty());
         mountainProxy.hoeheProperty().unbindBidirectional(mountain.hoeheProperty());

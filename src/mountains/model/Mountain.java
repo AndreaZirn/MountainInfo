@@ -23,6 +23,9 @@ public class Mountain {
     private final StringProperty gebiet = new SimpleStringProperty();
     private final StringProperty bildunterschrift = new SimpleStringProperty();
 
+    //ImageHandling
+    private final ObjectProperty imageProperty = new SimpleObjectProperty<>();
+
 
     //Default Konstruktor
     public Mountain() {
@@ -227,6 +230,22 @@ public class Mountain {
 
     public void setBildunterschrift(String bildunterschrift) {
         this.bildunterschrift.set(bildunterschrift);
+    }
+
+    public Object getImageProperty() {
+        return imageProperty.get();
+    }
+
+    public ObjectProperty imagePropertyProperty() {
+        return imageProperty;
+    }
+
+    public void setImageProperty(Object imageProperty) {
+        this.imageProperty.set(imageProperty);
+    }
+
+    public void setHoehe(double hoehe) {
+        this.hoehe.set(hoehe);
     }
 
 }

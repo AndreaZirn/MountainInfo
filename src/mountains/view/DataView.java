@@ -4,10 +4,13 @@ import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.util.converter.NumberStringConverter;
+import mountains.model.LanguageSwitcher;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
@@ -18,6 +21,8 @@ import mountains.model.MountainListModel;
 public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
     private final MountainListModel mountainlist;
+
+    private final LanguageSwitcher languageModel;
 
 
     Label nameLabel;
@@ -45,6 +50,10 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     private TextField bildunterschriftField;
     private Mountain mountain;
 
+    //ImageHandling
+    private  Image image;
+    private ImageView imageView;
+
     public DataView(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
         init();
@@ -62,7 +71,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         //setHgap(5);
         setVgap(20);
         setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
-
 
         nameLabel = createLabel("Name:");
         hoeheLabel = createLabel("Höhe:");
@@ -87,6 +95,11 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         kantonField = new TextField();
         gebietField = new TextField();
         bildunterschriftField = new TextField();
+
+        //ImageHandling
+        image = new Image("/mountainpictures/0-1.jpg");
+        imageView = new ImageView();
+        imageView.setImage(image);
 
     }
 
@@ -119,7 +132,9 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         RowConstraints r7 = new RowConstraints(30);
         getRowConstraints().addAll(r1, r2, r3, r4, r5, r6, r7);
 
-        //TODO: +. Reihe mit Bild
+        //TODO: Add image into the first row in Gridpane
+        add(imageView, 0, 0);
+
         add(nameLabel, 0, 1);
         add(hoeheLabel, 3, 1);
         add(dominanzLabel, 0, 2);
@@ -155,6 +170,9 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     @Override
     public void addBindings() {
         Mountain mountainProxy = mountainlist.getMountainProxy();
+
+        //imageHandling
+        imageView.imageProperty().bindBidirectional(mountainProxy.imagePropertyProperty());
 
         nameField.textProperty().bindBidirectional(mountainProxy.nameProperty());
         Bindings.bindBidirectional(hoeheField.textProperty(), mountainProxy.hoeheProperty(), new NumberStringConverter());

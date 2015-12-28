@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import mountains.model.LanguageSwitcher;
 import mountains.model.MountainListModel;
 import mountains.view.MountainUI;
 
@@ -18,6 +19,8 @@ public class MountainStarter extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
             MountainListModel model = new MountainListModel();
+
+            LanguageSwitcher languageModel = new LanguageSwitcher();
 
             Parent rootPanel = new MountainUI(model);
 

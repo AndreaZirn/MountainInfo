@@ -18,6 +18,9 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     private Button undoButton;
     private Button saveButton;
 
+    private Button englishButton;
+    private Button germanButton;
+
     public Navigation(MountainListModel mountainlist) {
         this.mountainlist = mountainlist;
         getStyleClass().add("buttonbar");
@@ -35,6 +38,9 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
         redoButton = new Button("redo");
         undoButton = new Button("undo");
         saveButton = new Button("save");
+
+        englishButton = new Button();
+        germanButton = new Button();
     }
 
     @Override
