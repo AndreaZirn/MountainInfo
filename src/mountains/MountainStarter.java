@@ -27,8 +27,8 @@ public class MountainStarter extends Application {
             Scene scene = new Scene(rootPanel);
 
 
-        /*String stylesheet = getClass().getResource("style.css").toExternalForm();
-        scene.getStylesheets().add(stylesheet);*/
+            String stylesheet = getClass().getResource("style.css").toExternalForm();
+            scene.getStylesheets().add(stylesheet);
 
         
             primaryStage.getIcons().add(new Image("wappen/wappen_gross/switzerland.png"));

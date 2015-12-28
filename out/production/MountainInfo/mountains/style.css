@@ -1,0 +1,96 @@
+
+/*
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 1 1 1 1;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}*/
+
+
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: rgb(75, 75, 75);
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+/*
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent rgb(200, 200, 200) transparent rgb(200, 200, 200);
+    -fx-background-color: transparent, derive(white,20%);
+}*/
+
+.split-pane {
+    -fx-padding: 0 0 0 0;
+}
+
+.label{
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.button {
+    -fx-border-color: rgb(200, 200, 200);
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color: rgb(0, 150, 200);
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 10pt;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: rgb(0, 90, 120);
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: rgb(0, 0, 0);
+  -fx-text-fill: rgb(255, 255, 255);
+}
+
+.button:focused {
+   -fx-background-color: rgb(50, 200, 240);
+   -fx-border-color: rgb(150, 150, 150);
+   -fx-text-fill: white;
+
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
