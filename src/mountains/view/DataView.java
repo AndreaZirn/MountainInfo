@@ -54,8 +54,9 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     private  Image image;
     private ImageView imageView;
 
-    public DataView(MountainListModel mountainlist) {
+    public DataView(MountainListModel mountainlist, LanguageSwitcher languageModel) {
         this.mountainlist = mountainlist;
+        this.languageModel = languageModel;
         init();
     }
 
@@ -72,17 +73,17 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         setVgap(20);
         setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
 
-        nameLabel = createLabel("Name:");
-        hoeheLabel = createLabel("Höhe:");
-        dominanzLabel = createLabel("Dominanz:");
-        kmBisLabel = createLabel("Km bis:");
-        mBisLabel = createLabel("M bis:");
-        schartenhoeheLabel = createLabel("Schartenhöhe:");
-        typLabel = createLabel("Typ:");
-        regionLabel = createLabel("Region:");
-        kantonLabel = createLabel("Kanton:");
-        gebietLabel = createLabel("Gebiet:");
-        bildunterschriftLabel = createLabel("Bildunterschrift:");
+        nameLabel = new Label();
+        hoeheLabel = new Label();
+        dominanzLabel = new Label();
+        kmBisLabel = new Label();
+        mBisLabel = new Label();
+        schartenhoeheLabel = new Label();
+        typLabel = new Label();
+        regionLabel = new Label();
+        kantonLabel = new Label();
+        gebietLabel = new Label();
+        bildunterschriftLabel = new Label();
 
         nameField = new TextField();
         hoeheField = new TextField();
@@ -162,14 +163,23 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
     }
 
-    private Label createLabel(String text){
-        Label label = new Label(text);
-        return label;
-}
 
     @Override
     public void addBindings() {
         Mountain mountainProxy = mountainlist.getMountainProxy();
+
+        nameLabel.textProperty().bind(languageModel.nameLabelProperty());
+        hoeheLabel.textProperty().bind(languageModel.hoeheLabelProperty());
+        dominanzLabel.textProperty().bind(languageModel.dominanzLabelProperty());
+        kmBisLabel.textProperty().bind(languageModel.kmBisLabelProperty());
+        mBisLabel.textProperty().bind(languageModel.mBisLabelProperty());
+        schartenhoeheLabel.textProperty().bind(languageModel.schartenhoeheLabelProperty());
+        typLabel.textProperty().bind(languageModel.typLabelProperty());
+        regionLabel.textProperty().bind(languageModel.regionLabelProperty());
+        kantonLabel.textProperty().bind(languageModel.kantonLabelProperty());
+        gebietLabel.textProperty().bind(languageModel.gebietLabelProperty());
+        bildunterschriftLabel.textProperty().bind(languageModel.bildunterschriftLabelProperty());
+
 
         //imageHandling
         imageView.imageProperty().bindBidirectional(mountainProxy.imagePropertyProperty());

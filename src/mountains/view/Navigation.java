@@ -3,6 +3,7 @@ package mountains.view;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import mountains.model.LanguageSwitcher;
 import mountains.model.MountainListModel;
 
 /**
@@ -11,6 +12,8 @@ import mountains.model.MountainListModel;
 public class Navigation extends HBox implements ViewMixin<MountainListModel>{
 
     private final MountainListModel mountainlist;
+
+    private final LanguageSwitcher languageModel;
 
     private Button addButton;
     private Button deleteButton;
@@ -21,8 +24,9 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     private Button englishButton;
     private Button germanButton;
 
-    public Navigation(MountainListModel mountainlist) {
+    public Navigation(MountainListModel mountainlist, LanguageSwitcher languageModel) {
         this.mountainlist = mountainlist;
+        this.languageModel = languageModel;
         getStyleClass().add("buttonbar");
         init();
     }
@@ -33,11 +37,11 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     }
     @Override
     public void initializeControls() {
-        addButton = new Button("add");
-        deleteButton = new Button("delete");
-        redoButton = new Button("redo");
-        undoButton = new Button("undo");
-        saveButton = new Button("save");
+        addButton = new Button();
+        deleteButton = new Button();
+        redoButton = new Button();
+        undoButton = new Button();
+        saveButton = new Button();
 
         englishButton = new Button();
         germanButton = new Button();
@@ -47,7 +51,7 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     public void layoutControls() {
         setPadding(new Insets(10));
         setSpacing(5);
-        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton);
+        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton, englishButton, germanButton);
     }
 
     @Override
@@ -57,12 +61,22 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
         addButton.setOnAction(event -> mountainlist.addNewMountain());
         deleteButton.setOnAction(event -> mountainlist.removeMountain());
         saveButton.setOnAction(event -> mountainlist.save());
+        germanButton.setOnAction(event -> languageModel.setLanguage(LanguageSwitcher.Lang.DE));
+        englishButton.setOnAction(event -> languageModel.setLanguage(LanguageSwitcher.Lang.EN));
     }
 
     @Override
     public void addBindings() {
         undoButton.disableProperty().bind(mountainlist.undoDisabledProperty());
         redoButton.disableProperty().bind(mountainlist.redoDisabledProperty());
+        germanButton.textProperty().bind(languageModel.germanButtonTextProperty());
+        englishButton.textProperty().bind(languageModel.englishButtonTextProperty());
+        saveButton.textProperty().bind(languageModel.saveButtonTextProperty());
+        addButton.textProperty().bind(languageModel.addButtonTextProperty());
+        deleteButton.textProperty().bind(languageModel.deleteButtonTextProperty());
+        undoButton.textProperty().bind(languageModel.undoButtonTextProperty());
+        redoButton.textProperty().bind(languageModel.redoButtonTextProperty());
+
     }
 
 }

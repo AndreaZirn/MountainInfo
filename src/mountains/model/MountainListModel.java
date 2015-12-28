@@ -25,7 +25,6 @@ public class MountainListModel {
 
     private static final String FILE_NAME = "mountains.csv";
 
-    private final StringProperty applicationTitle = new SimpleStringProperty("Schweizer Berge");
     private final IntegerProperty selectedMountainId  = new SimpleIntegerProperty(-1);
     private final IntegerProperty selectedIndex     = new SimpleIntegerProperty(-1);
 
@@ -90,9 +89,6 @@ public class MountainListModel {
     }
 
 
-    public StringProperty applicationTitleProperty() {
-        return applicationTitle;
-    }
 
     public ObservableList<Mountain> getMountains() {
         return mountains;
@@ -327,9 +323,6 @@ public class MountainListModel {
         this.selectedMountainId.set(selectedMountainId);
     }
 
-    public String getApplicationTitle() {
-        return applicationTitle.get();
-    }
     public boolean getUndoDisabled() {
         return undoDisabled.get();
     }

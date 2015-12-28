@@ -8,12 +8,18 @@ import javafx.beans.property.StringProperty;
  */
 public class LanguageSwitcher {
 
-    enum Lang {DE, EN}
+    public enum Lang {DE, EN}
 
     enum MultilanguageText {
-        WINDOW_TITLE("Schweizer Berge", "Swiss Mountains"),
+        APPLICATION_TITLE("Schweizer Berge", "Swiss Mountains"),
         GERMAN_BUTTON_TEXT("Deutsch", "German"),
         ENGLISH_BUTTON_TEXT("Englisch", "English"),
+
+        ADD_BUTTON_TEXT("Hinzufügen", "Add"),
+        SAVE_BUTTON_TEXT("Sichern", "Save"),
+        DELETE_BUTTON_TEXT("Löschen", "Delete"),
+        UNDO_BUTTON_TEXT("Zurücksetzten", "Undo"),
+        REDO_BUTTON_TEXT("Wiederholen", "Redo"),
 
         NAME_TEXT("Name:", "Name:"),
         HOEHE_TEXT("Höhe:", "Height:"),
@@ -25,7 +31,11 @@ public class LanguageSwitcher {
         REGION_TEXT("Region:", "Region:"),
         KANTON_TEXT("Kanton:", "Canton:"),
         GEBIET_TEXT("Region:", "Area:"),
-        BILDUNT_TEXT("Bildunterschrift:", "Caption:");
+        BILDUNT_TEXT("Bildunterschrift:", "Caption:"),
+
+        ID_COLUMN_TEXT("ID", "ID"),
+        NAME_COLUMN_TEXT("NAME", "NAME"),
+        HOEHE_COLUMN_TEXT("HÖHE", "HEIGHT");
 
 
         private final String germanLabel;
@@ -57,7 +67,7 @@ public class LanguageSwitcher {
         }
     }
 
-    private final StringProperty windowTitle       = new SimpleStringProperty();
+    private final StringProperty applicationTitle       = new SimpleStringProperty();
 
     private final StringProperty nameLabel = new SimpleStringProperty();
     private final StringProperty hoeheLabel = new SimpleStringProperty();
@@ -73,15 +83,31 @@ public class LanguageSwitcher {
 
     private final StringProperty germanButtonText  = new SimpleStringProperty();
     private final StringProperty englishButtonText = new SimpleStringProperty();
+    private final StringProperty addButtonText = new SimpleStringProperty();
+    private final StringProperty saveButtonText = new SimpleStringProperty();
+    private final StringProperty deleteButtonText = new SimpleStringProperty();
+    private final StringProperty undoButtonText = new SimpleStringProperty();
+    private final StringProperty redoButtonText = new SimpleStringProperty();
+
+    private final StringProperty idColumnText = new SimpleStringProperty();
+    private final StringProperty nameColumnText = new SimpleStringProperty();
+    private final StringProperty hoeheColumnText = new SimpleStringProperty();
+
 
     public LanguageSwitcher() {
         setLanguage(Lang.DE);
     }
 
     public void setLanguage(Lang lang) {
-        setWindowTitle(MultilanguageText.WINDOW_TITLE.getText(lang));
+        setApplicationTitle(MultilanguageText.APPLICATION_TITLE.getText(lang));
+
         setGermanButtonText(MultilanguageText.GERMAN_BUTTON_TEXT.getText(lang));
         setEnglishButtonText(MultilanguageText.ENGLISH_BUTTON_TEXT.getText(lang));
+        setAddButtonText(MultilanguageText.ADD_BUTTON_TEXT.getText(lang));
+        setSaveButtonText(MultilanguageText.SAVE_BUTTON_TEXT.getText(lang));
+        setDeleteButtonText(MultilanguageText.DELETE_BUTTON_TEXT.getText(lang));
+        setUndoButtonText(MultilanguageText.UNDO_BUTTON_TEXT.getText(lang));
+        setRedoButtonText(MultilanguageText.REDO_BUTTON_TEXT.getText(lang));
 
         setNameLabel(MultilanguageText.NAME_TEXT.getText(lang));
         setHoeheLabel(MultilanguageText.HOEHE_TEXT.getText(lang));
@@ -94,19 +120,23 @@ public class LanguageSwitcher {
         setKantonLabel(MultilanguageText.KANTON_TEXT.getText(lang));
         setGebietLabel(MultilanguageText.GEBIET_TEXT.getText(lang));
         setBildunterschriftLabel(MultilanguageText.BILDUNT_TEXT.getText(lang));
+
+        setIdColumnText(MultilanguageText.ID_COLUMN_TEXT.getText(lang));
+        setNameColumnText(MultilanguageText.NAME_COLUMN_TEXT.getText(lang));
+        setHoeheColumnText(MultilanguageText.HOEHE_COLUMN_TEXT.getText(lang));
     }
 
 
-    public String getWindowTitle() {
-        return windowTitle.get();
+    public String getApplicationTitle() {
+        return applicationTitle.get();
     }
 
-    public StringProperty windowTitleProperty() {
-        return windowTitle;
+    public StringProperty applicationTitleProperty() {
+        return applicationTitle;
     }
 
-    public void setWindowTitle(String windowTitle) {
-        this.windowTitle.set(windowTitle);
+    public void setApplicationTitle(String windowTitle) {
+        this.applicationTitle.set(windowTitle);
     }
 
     public String getNameLabel() {
@@ -263,5 +293,101 @@ public class LanguageSwitcher {
 
     public void setEnglishButtonText(String englishButtonText) {
         this.englishButtonText.set(englishButtonText);
+    }
+
+    public String getAddButtonText() {
+        return addButtonText.get();
+    }
+
+    public StringProperty addButtonTextProperty() {
+        return addButtonText;
+    }
+
+    public void setAddButtonText(String addButtonText) {
+        this.addButtonText.set(addButtonText);
+    }
+
+    public String getSaveButtonText() {
+        return saveButtonText.get();
+    }
+
+    public StringProperty saveButtonTextProperty() {
+        return saveButtonText;
+    }
+
+    public void setSaveButtonText(String saveButtonText) {
+        this.saveButtonText.set(saveButtonText);
+    }
+
+    public String getDeleteButtonText() {
+        return deleteButtonText.get();
+    }
+
+    public StringProperty deleteButtonTextProperty() {
+        return deleteButtonText;
+    }
+
+    public void setDeleteButtonText(String deleteButtonText) {
+        this.deleteButtonText.set(deleteButtonText);
+    }
+
+    public String getUndoButtonText() {
+        return undoButtonText.get();
+    }
+
+    public StringProperty undoButtonTextProperty() {
+        return undoButtonText;
+    }
+
+    public void setUndoButtonText(String undoButtonText) {
+        this.undoButtonText.set(undoButtonText);
+    }
+
+    public String getRedoButtonText() {
+        return redoButtonText.get();
+    }
+
+    public StringProperty redoButtonTextProperty() {
+        return redoButtonText;
+    }
+
+    public void setRedoButtonText(String redoButtonText) {
+        this.redoButtonText.set(redoButtonText);
+    }
+
+    public String getIdColumnText() {
+        return idColumnText.get();
+    }
+
+    public StringProperty idColumnTextProperty() {
+        return idColumnText;
+    }
+
+    public void setIdColumnText(String idColumnText) {
+        this.idColumnText.set(idColumnText);
+    }
+
+    public String getNameColumnText() {
+        return nameColumnText.get();
+    }
+
+    public StringProperty nameColumnTextProperty() {
+        return nameColumnText;
+    }
+
+    public void setNameColumnText(String nameColumnText) {
+        this.nameColumnText.set(nameColumnText);
+    }
+
+    public String getHoeheColumnText() {
+        return hoeheColumnText.get();
+    }
+
+    public StringProperty hoeheColumnTextProperty() {
+        return hoeheColumnText;
+    }
+
+    public void setHoeheColumnText(String hoeheColumnText) {
+        this.hoeheColumnText.set(hoeheColumnText);
     }
 }

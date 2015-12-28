@@ -5,6 +5,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import mountains.model.LanguageSwitcher;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
@@ -15,17 +16,20 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
     private final MountainListModel mountainlist;
 
+    private final LanguageSwitcher languageModel;
+
     private TableView<Mountain> mountainTable;
     private ChangeListener<Mountain> mountainChangeListener;
 
+    TableColumn<Mountain, Integer> idColumn;
+    TableColumn<Mountain, String> nameColumn;
+    TableColumn<Mountain, Double> hoeheColumn;
 
-    public Tableview(MountainListModel mountainlist) {
+
+    public Tableview(MountainListModel mountainlist, LanguageSwitcher languageModel) {
         this.mountainlist = mountainlist;
-        initializeControls();
-        layoutControls();
-        addEventHandlers();
-        addValueChangedListeners();
-        addBindings();
+        this.languageModel = languageModel;
+        init();
     }
 
 
@@ -41,9 +45,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     private TableView<Mountain> initializeMountainTabelle(){
         TableView<Mountain> tableView = new TableView<>(mountainlist.getMountains());
 
-        TableColumn<Mountain, Integer> idColumn = new TableColumn<>("ID");
-        TableColumn<Mountain, String> nameColumn = new TableColumn<>("Name");
-        TableColumn<Mountain, Double> hoeheColumn = new TableColumn<>("Höhe");
+        idColumn = new TableColumn<>();
+        nameColumn = new TableColumn<>();
+        hoeheColumn = new TableColumn<>();
 
         idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
@@ -85,6 +89,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     }
     @Override
     public void addBindings() {
+        idColumn.textProperty().bind(languageModel.idColumnTextProperty());
+        nameColumn.textProperty().bind(languageModel.nameColumnTextProperty());
+        hoeheColumn.textProperty().bind(languageModel.hoeheColumnTextProperty());
 
     }
 }

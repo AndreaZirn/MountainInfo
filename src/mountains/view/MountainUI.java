@@ -1,6 +1,7 @@
 package mountains.view;
 
 import javafx.scene.layout.BorderPane;
+import mountains.model.LanguageSwitcher;
 import mountains.model.MountainListModel;
 
 /**
@@ -8,6 +9,7 @@ import mountains.model.MountainListModel;
  */
 public class MountainUI extends BorderPane implements ViewMixin<MountainListModel> {
     private final MountainListModel model;
+    private final LanguageSwitcher languageModel;
 
     private SplitLayout splitLayout;
     private Navigation navigation;
@@ -15,8 +17,9 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
     private Tableview tableview;
 
 
-    public MountainUI(MountainListModel model) {
+    public MountainUI(MountainListModel model, LanguageSwitcher languageModel) {
         this.model = model;
+        this.languageModel = languageModel;
         init();
     }
 
@@ -29,9 +32,9 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
     //Initialisierung aller Controls
     public void initializeControls() {
         splitLayout = new SplitLayout(model);
-        navigation = new Navigation(model);
-        dataview = new DataView(model);
-        tableview = new Tableview(model);
+        navigation = new Navigation(model, languageModel);
+        dataview = new DataView(model, languageModel);
+        tableview = new Tableview(model, languageModel);
     }
 
     //Anordenen aller Controler

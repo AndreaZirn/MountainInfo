@@ -22,7 +22,7 @@ public class MountainStarter extends Application {
 
             LanguageSwitcher languageModel = new LanguageSwitcher();
 
-            Parent rootPanel = new MountainUI(model);
+            Parent rootPanel = new MountainUI(model, languageModel);
 
             Scene scene = new Scene(rootPanel);
 
@@ -33,7 +33,7 @@ public class MountainStarter extends Application {
         
             primaryStage.getIcons().add(new Image("wappen/wappen_gross/switzerland.png"));
 
-            primaryStage.titleProperty().bind(model.applicationTitleProperty());
+            primaryStage.titleProperty().bind(languageModel.applicationTitleProperty());
             primaryStage.setScene(scene);
 
             primaryStage.setWidth(900);
