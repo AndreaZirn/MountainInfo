@@ -2,6 +2,9 @@ package mountains.model;
 
 
 import javafx.beans.property.*;
+import javafx.scene.image.Image;
+
+import java.io.InputStream;
 
 
 /**
@@ -24,6 +27,7 @@ public class Mountain {
     private final StringProperty bildunterschrift = new SimpleStringProperty();
 
     //ImageHandling
+    private static final Image NO_PICTURE = new Image(Mountain.class.getResourceAsStream("/mountainpictures/noPicture.jpg"));
     private final ObjectProperty imageProperty = new SimpleObjectProperty<>();
 
 
@@ -65,6 +69,9 @@ public class Mountain {
         setSchartenhoehe(Double.valueOf(line[9]));
         setmBis(line[10]);
         setBildunterschrift(line[11]);
+
+        //ImageHandling
+        setImageProperty(getPicture());
     }
 
     //gleiche Reihenfolge wie oben bei "public Mountain (String..."
@@ -84,6 +91,12 @@ public class Mountain {
         info.append(getBildunterschrift() + ";");
 
         return info.toString();
+    }
+
+    public Image getPicture(){
+        InputStream stream = Mountain.class.getResourceAsStream("/mountainpictures/" + getId() + "-1.jpg");
+
+        return stream != null ? new Image(stream) : NO_PICTURE;
     }
 
     //getter und setter
