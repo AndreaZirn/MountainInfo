@@ -25,7 +25,7 @@ public class SplitLayout extends SplitPane implements ViewMixin<MountainListMode
     }
     @Override
     public void layoutControls() {
-        setDividerPositions(0.29, 0.6);
+        setDividerPositions(0.309, 0.6);
     }
 }
 

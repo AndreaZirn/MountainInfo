@@ -98,9 +98,10 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         bildunterschriftField = new TextField();
 
         //ImageHandling
-        image = new Image("/mountainpictures/0-1.jpg");
         imageView = new ImageView();
         imageView.setImage(image);
+        imageView.setFitHeight(300);
+        imageView.setFitWidth(580);
 
     }
 
@@ -134,7 +135,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         getRowConstraints().addAll(r1, r2, r3, r4, r5, r6, r7);
 
         //TODO: Add image into the first row in Gridpane
-        add(imageView, 0, 0);
+        add(imageView, 0, 0, 5, 1);
 
         add(nameLabel, 0, 1);
         add(hoeheLabel, 3, 1);
