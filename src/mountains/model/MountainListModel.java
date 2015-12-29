@@ -272,6 +272,7 @@ public class MountainListModel {
     private List<Mountain> readFromFile() {
         try (Stream<String> stream = getStreamOfLines(FILE_NAME)) {
             return stream
+                    .skip(1)
                     .map(s -> new Mountain(s.split(";")))      // aus jeder Zeile ein Objekt machen
                     .collect(Collectors.toList());            // alles aufsammeln
         }
