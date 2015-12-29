@@ -1,8 +1,10 @@
 package mountains.view;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import mountains.model.LanguageSwitcher;
 import mountains.model.MountainListModel;
 
@@ -24,6 +26,8 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     private Button englishButton;
     private Button germanButton;
 
+    HBox hbox1 = new HBox();
+
     public Navigation(MountainListModel mountainlist, LanguageSwitcher languageModel) {
         this.mountainlist = mountainlist;
         this.languageModel = languageModel;
@@ -37,21 +41,26 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     }
     @Override
     public void initializeControls() {
+        englishButton = new Button();
+        germanButton = new Button();
         addButton = new Button();
         deleteButton = new Button();
         redoButton = new Button();
         undoButton = new Button();
         saveButton = new Button();
 
-        englishButton = new Button();
-        germanButton = new Button();
+        hbox1.setAlignment(Pos.CENTER_RIGHT);
+        hbox1.getChildren().addAll(englishButton, germanButton);
+
     }
 
     @Override
     public void layoutControls() {
+        setAlignment(Pos.CENTER_LEFT);
         setPadding(new Insets(10));
         setSpacing(5);
-        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton, englishButton, germanButton);
+        getChildren().addAll(addButton, deleteButton, redoButton, undoButton, saveButton, hbox1);
+        setHgrow(hbox1, Priority.ALWAYS);
     }
 
     @Override

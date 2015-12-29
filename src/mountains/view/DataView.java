@@ -100,7 +100,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         //ImageHandling
         imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitHeight(300);
+        imageView.setFitHeight(312);
         imageView.setFitWidth(580);
 
     }
