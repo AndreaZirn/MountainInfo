@@ -24,7 +24,8 @@
 }*/
 
 .buttonbar{
-     -fx-background-color: white;
+      -fx-background-color: white;
+      -fx-border-color: grey;
 }
 
 .table-view .column-header .label {
@@ -36,13 +37,12 @@
 }
 
 .split-pane:horizontal > .split-pane-divider {
-    -fx-border-color: white;
     -fx-background-color: white;
 }
 
 .split-pane {
     -fx-padding: 0 0 0 0;
-    /*-fx-background-color: white;*/
+   /* -fx-background-color: white;*/
 }
 
 .label{
