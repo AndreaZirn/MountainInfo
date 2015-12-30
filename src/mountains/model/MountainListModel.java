@@ -84,7 +84,7 @@ public class MountainListModel {
                     }
                 }
         );
-        setSelectedMountainId(1);
+        setSelectedMountainId(0);
 
     }
 
