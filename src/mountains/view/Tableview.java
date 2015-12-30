@@ -53,6 +53,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         hoeheColumn.setCellValueFactory(cellData -> cellData.getValue().hoeheProperty().asObject());
 
+        nameColumn.setMinWidth(120);
+        hoeheColumn.setMinWidth(30);
+
         tableView.getColumns().addAll(idColumn, nameColumn, hoeheColumn);
 
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
