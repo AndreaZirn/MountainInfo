@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.util.converter.NumberStringConverter;
 import mountains.model.LanguageSwitcher;
@@ -107,8 +108,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
     @Override
     public void layoutControls() {
-        //ColumnConstraints cc = new ColumnConstraints();
-        //cc.setHgrow(Priority.ALWAYS);
         ColumnConstraints c1 = new ColumnConstraints();
         c1.setPercentWidth(20);
         ColumnConstraints c2 = new ColumnConstraints();
@@ -120,12 +119,14 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         ColumnConstraints c5 = new ColumnConstraints();
         c5.setPercentWidth(28);
         getColumnConstraints().addAll(c1, c2, c3, c4, c5);
+        c1.setHgrow(Priority.ALWAYS);
 
 
         //RowConstraints rc = new RowConstraints();
-        //rc.setVgrow(Priority.ALWAYS);
+        //
         RowConstraints r1 = new RowConstraints();
         r1.setPercentHeight(60);
+        r1.setVgrow(Priority.ALWAYS);
         RowConstraints r2 = new RowConstraints(30);
         RowConstraints r3 = new RowConstraints(30);
         RowConstraints r4 = new RowConstraints(30);
@@ -134,7 +135,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         RowConstraints r7 = new RowConstraints(30);
         getRowConstraints().addAll(r1, r2, r3, r4, r5, r6, r7);
 
-        //TODO: Add image into the first row in Gridpane
+        //Add image into the first row in Gridpane
         add(imageView, 0, 0, 5, 1);
 
         add(nameLabel, 0, 1);
