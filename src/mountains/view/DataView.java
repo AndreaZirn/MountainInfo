@@ -2,14 +2,12 @@ package mountains.view;
 
 import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.RowConstraints;
+import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 import mountains.model.LanguageSwitcher;
 import mountains.model.Mountain;
@@ -25,6 +23,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
     private final LanguageSwitcher languageModel;
 
+    HBox hboxImage;
 
     Label nameLabel;
     Label hoeheLabel;
@@ -73,6 +72,9 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         //setHgap(5);
         setVgap(20);
         setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
+
+        hboxImage = new HBox();
+        hboxImage.setAlignment(Pos.CENTER);
 
         nameLabel = new Label();
         hoeheLabel = new Label();
@@ -136,7 +138,8 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         getRowConstraints().addAll(r1, r2, r3, r4, r5, r6, r7);
 
         //Add image into the first row in Gridpane
-        add(imageView, 0, 0, 5, 1);
+        hboxImage.getChildren().add(imageView);
+        add(hboxImage, 0, 0, 5, 1);
 
         add(nameLabel, 0, 1);
         add(hoeheLabel, 3, 1);

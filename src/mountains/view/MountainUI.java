@@ -35,6 +35,7 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
         navigation = new Navigation(model, languageModel);
         dataview = new DataView(model, languageModel);
         tableview = new Tableview(model, languageModel);
+
     }
 
     //Anordenen aller Controler

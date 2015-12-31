@@ -55,10 +55,15 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
 
         nameColumn.setMinWidth(120);
         hoeheColumn.setMinWidth(30);
+        idColumn.setMinWidth(20);
+
+        this.setMaxWidth(275);
 
         tableView.getColumns().addAll(idColumn, nameColumn, hoeheColumn);
 
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        tableView.getSelectionModel().select(mountainlist.getMountain(1));
 
         return tableView;
     }
