@@ -18,7 +18,7 @@ public class LanguageSwitcher {
         ADD_BUTTON_TEXT("Hinzufügen", "Add"),
         SAVE_BUTTON_TEXT("Sichern", "Save"),
         DELETE_BUTTON_TEXT("Löschen", "Delete"),
-        UNDO_BUTTON_TEXT("Zurücksetzten", "Undo"),
+        UNDO_BUTTON_TEXT("Zurücksetzen", "Undo"),
         REDO_BUTTON_TEXT("Wiederholen", "Redo"),
 
         NAME_TEXT("Name:", "Name:"),
