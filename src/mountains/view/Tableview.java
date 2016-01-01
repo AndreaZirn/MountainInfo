@@ -51,6 +51,24 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         searchPane = new GridPane();
         searchLabel = new Label("Suchen:");
         searchField = new TextField();
+        mountainTable.setItems(mountainlist.sortedData);
+
+        // SearchHandling
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            mountainlist.filteredData.setPredicate(mountain -> {
+                // If filter text is empty, display all mountains.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                // Compare name of every mountain with filter text.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true; // Filter matches name.
+                }
+                return false; // Does not match.
+            });
+        });
 
     }
 
@@ -126,6 +144,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         idColumn.textProperty().bind(languageModel.idColumnTextProperty());
         nameColumn.textProperty().bind(languageModel.nameColumnTextProperty());
         hoeheColumn.textProperty().bind(languageModel.hoeheColumnTextProperty());
+        mountainlist.sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
     }
 
     public Label getSearchLabel() {

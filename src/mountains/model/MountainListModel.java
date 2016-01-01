@@ -5,6 +5,8 @@ import javafx.beans.property.*;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -35,6 +37,8 @@ public class MountainListModel {
     private final BooleanProperty redoDisabled = new SimpleBooleanProperty();
 
     private final ObservableList<Mountain> mountains = FXCollections.observableArrayList();
+    public FilteredList<Mountain> filteredData = new FilteredList<>(mountains, p -> true);
+    public SortedList<Mountain> sortedData = new SortedList<>(filteredData);
 
     private final Mountain mountainProxy = new Mountain();
 
@@ -230,6 +234,7 @@ public class MountainListModel {
         mountainProxy.kantonProperty().bindBidirectional(mountain.kantonProperty());
         mountainProxy.gebietProperty().bindBidirectional(mountain.gebietProperty());
         mountainProxy.bildunterschriftProperty().bindBidirectional(mountain.bildunterschriftProperty());
+
     }
 
     private void unbindFromProxy(Mountain mountain) {
