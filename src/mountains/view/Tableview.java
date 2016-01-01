@@ -2,8 +2,12 @@ package mountains.view;
 
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import mountains.model.LanguageSwitcher;
@@ -26,6 +30,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     TableColumn<Mountain, String> nameColumn;
     TableColumn<Mountain, Double> hoeheColumn;
 
+    GridPane searchPane;
+    Label searchLabel;
+    private TextField searchField;
 
     public Tableview(MountainListModel mountainlist, LanguageSwitcher languageModel) {
         this.mountainlist = mountainlist;
@@ -41,6 +48,10 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     @Override
     public void initializeControls() {
         mountainTable = initializeMountainTabelle();
+        searchPane = new GridPane();
+        searchLabel = new Label("Suchen:");
+        searchField = new TextField();
+
     }
 
     private TableView<Mountain> initializeMountainTabelle(){
@@ -69,13 +80,23 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         setPadding(new Insets(10, 0, 10, 10));
 
         return tableView;
+
     }
 
 
     @Override
     public void layoutControls() {
         setVgrow(mountainTable, Priority.ALWAYS);
-        getChildren().addAll(mountainTable);
+        getChildren().addAll(mountainTable, searchPane);
+        searchPane.setPadding(new Insets(10, 0, 0, 0));
+        searchPane.add(searchLabel, 0, 0);
+        searchPane.add(searchField, 2, 0);
+        ColumnConstraints c1 = new ColumnConstraints();
+        c1.setPercentWidth(30);
+        ColumnConstraints c2 = new ColumnConstraints(1);
+        ColumnConstraints c3 = new ColumnConstraints();
+        c3.setPercentWidth(69);
+        searchPane.getColumnConstraints().addAll(c1, c2, c3);
 
     }
     @Override
@@ -105,6 +126,21 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         idColumn.textProperty().bind(languageModel.idColumnTextProperty());
         nameColumn.textProperty().bind(languageModel.nameColumnTextProperty());
         hoeheColumn.textProperty().bind(languageModel.hoeheColumnTextProperty());
+    }
 
+    public Label getSearchLabel() {
+        return searchLabel;
+    }
+
+    public void setSearchLabel(Label searchLabel) {
+        this.searchLabel = searchLabel;
+    }
+
+    public TextField getSearchField() {
+        return searchField;
+    }
+
+    public void setSearchField(TextField searchField) {
+        this.searchField = searchField;
     }
 }
