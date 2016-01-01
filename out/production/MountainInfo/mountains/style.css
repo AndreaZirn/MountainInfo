@@ -24,8 +24,9 @@
 }*/
 
 .buttonbar{
-      -fx-background-color: white;
-      /*-fx-border-color: grey;*/
+      -fx-background-color: white;/*aliceblue*/
+      -fx-border-color: grey;
+      -fx-border-width: 0 0 1 0;
 }
 
 .table-view .column-header .label {
@@ -36,6 +37,10 @@
     -fx-opacity: 1;
 }
 
+.table-view{
+    -fx-border-color: grey;
+}
+
 .split-pane:horizontal > .split-pane-divider {
     -fx-background-color: white;
 }
@@ -44,6 +49,10 @@
     -fx-padding: 0 0 0 0;
     -fx-background-color: white;
     /*-fx-border-color: grey;*/
+}
+
+.grid {
+    -fx-border-color: red;
 }
 
 .label{
@@ -64,7 +73,7 @@
     -fx-border-width: 2;
     -fx-border-radius: 16;
     -fx-background-radius: 16;
-    -fx-background-color: rgb(0, 150, 200);
+    -fx-background-color: rgb(0, 120, 200);
     -fx-font-family: "Segoe UI Semibold";
     -fx-font-size: 10pt;
     -fx-text-fill: rgb(255, 255, 255);
@@ -72,19 +81,18 @@
 }
 
 .button:hover {
-    -fx-background-color: rgb(0, 90, 120);
+    -fx-background-color: rgb(0, 65, 120);
 }
 
-.button:pressed, .button:default:hover:pressed {
+.button:pressed {
   -fx-background-color: rgb(0, 0, 0);
   -fx-text-fill: rgb(255, 255, 255);
 }
 
 .button:focused {
-   -fx-background-color: rgb(50, 200, 240);
-   -fx-border-color: rgb(150, 150, 150);
+   -fx-background-color: rgb(145, 200, 255);
+   -fx-border-color: rgb(200, 200, 200);
    -fx-text-fill: white;
-
 }
 
 .button:disabled, .button:default:disabled {
@@ -94,10 +102,6 @@
 }
 
 .button:default {
-    -fx-background-color: -fx-focus-color;
-    -fx-text-fill: #ffffff;
-}
-
-.button:default:hover {
-    -fx-background-color: derive(-fx-focus-color,30%);
+    -fx-background-color: rgb(0, 120, 200);
+    -fx-text-fill: rgb(255, 255, 255);
 }

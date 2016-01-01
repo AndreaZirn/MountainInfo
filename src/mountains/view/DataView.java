@@ -71,7 +71,7 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
         //setHgap(5);
         setVgap(20);
-        setPadding(new Insets(20, 20, 20, 20)); //top, right, bottom, left
+        setPadding(new Insets(10, 10, 10, 10)); //top, right, bottom, left
 
         hboxImage = new HBox();
         hboxImage.setAlignment(Pos.CENTER);
@@ -103,8 +103,8 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         //ImageHandling
         imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitHeight(312);
-        imageView.setFitWidth(580);
+        imageView.setFitHeight(320);
+        imageView.setFitWidth(600);
 
     }
 
@@ -164,7 +164,6 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
         add(kantonField, 1, 5);
         add(gebietField, 4, 5);
         add(bildunterschriftField, 1, 6, 3, 1); //colIndex, rowIndex, colSpan, rowSpan
-
 
     }
 

@@ -1,5 +1,6 @@
 package mountains.view;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.SplitPane;
 import mountains.model.MountainListModel;
 
@@ -22,11 +23,11 @@ public class SplitLayout extends SplitPane implements ViewMixin<MountainListMode
     }
     @Override
     public void initializeControls() {
+        setPadding(new Insets(20));
     }
     @Override
     public void layoutControls() {
         setDividerPositions(0.4, 0.6);
-
     }
 }
 

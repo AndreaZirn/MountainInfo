@@ -1,6 +1,7 @@
 package mountains.view;
 
 import javafx.beans.value.ChangeListener;
+import javafx.geometry.Insets;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Priority;
@@ -64,6 +65,8 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         tableView.getSelectionModel().select(mountainlist.getMountain(1));
+
+        setPadding(new Insets(10, 0, 10, 10));
 
         return tableView;
     }
