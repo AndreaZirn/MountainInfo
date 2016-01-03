@@ -49,7 +49,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     public void initializeControls() {
         mountainTable = initializeMountainTabelle();
         searchPane = new GridPane();
-        searchLabel = new Label("Suchen:");
+        searchLabel = new Label();
         searchField = new TextField();
         mountainTable.setItems(mountainlist.sortedData);
 
@@ -84,10 +84,13 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         hoeheColumn.setCellValueFactory(cellData -> cellData.getValue().hoeheProperty().asObject());
 
         nameColumn.setMinWidth(120);
-        hoeheColumn.setMinWidth(30);
-        idColumn.setMinWidth(20);
+        hoeheColumn.setMinWidth(35);
+        idColumn.setMinWidth(35);
+        idColumn.setPrefWidth(35);
+        idColumn.setMaxWidth(40);
 
-        this.setMaxWidth(275);
+        this.setMaxWidth(300);
+        this.setMinWidth(65);
 
         tableView.getColumns().addAll(idColumn, nameColumn, hoeheColumn);
 
@@ -144,7 +147,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         idColumn.textProperty().bind(languageModel.idColumnTextProperty());
         nameColumn.textProperty().bind(languageModel.nameColumnTextProperty());
         hoeheColumn.textProperty().bind(languageModel.hoeheColumnTextProperty());
+        searchLabel.textProperty().bind(languageModel.searchLabelProperty());
         mountainlist.sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
+
     }
 
     public Label getSearchLabel() {

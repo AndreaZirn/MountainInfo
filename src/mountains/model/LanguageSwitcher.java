@@ -35,7 +35,9 @@ public class LanguageSwitcher {
 
         ID_COLUMN_TEXT("ID", "ID"),
         NAME_COLUMN_TEXT("NAME", "NAME"),
-        HOEHE_COLUMN_TEXT("HÖHE", "HEIGHT");
+        HOEHE_COLUMN_TEXT("HÖHE", "HEIGHT"),
+
+        SEARCH_TEXT("Suche:", "Search:");
 
 
         private final String germanLabel;
@@ -93,6 +95,8 @@ public class LanguageSwitcher {
     private final StringProperty nameColumnText = new SimpleStringProperty();
     private final StringProperty hoeheColumnText = new SimpleStringProperty();
 
+    private final StringProperty searchLabel = new SimpleStringProperty();
+
 
     public LanguageSwitcher() {
         setLanguage(Lang.DE);
@@ -124,6 +128,9 @@ public class LanguageSwitcher {
         setIdColumnText(MultilanguageText.ID_COLUMN_TEXT.getText(lang));
         setNameColumnText(MultilanguageText.NAME_COLUMN_TEXT.getText(lang));
         setHoeheColumnText(MultilanguageText.HOEHE_COLUMN_TEXT.getText(lang));
+
+        setSearchLabel(MultilanguageText.SEARCH_TEXT.getText(lang));
+
     }
 
 
@@ -389,5 +396,17 @@ public class LanguageSwitcher {
 
     public void setHoeheColumnText(String hoeheColumnText) {
         this.hoeheColumnText.set(hoeheColumnText);
+    }
+
+    public String getSearchLabel() {
+        return searchLabel.get();
+    }
+
+    public StringProperty searchLabelProperty() {
+        return searchLabel;
+    }
+
+    public void setSearchLabel(String searchLabel) {
+        this.searchLabel.set(searchLabel);
     }
 }
