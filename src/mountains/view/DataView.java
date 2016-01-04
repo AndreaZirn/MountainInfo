@@ -110,14 +110,14 @@ public class DataView extends GridPane implements ViewMixin<MountainListModel> {
 
     @Override
     public void layoutControls() {
-        ColumnConstraints c1 = new ColumnConstraints();
-        c1.setPercentWidth(20);
+        ColumnConstraints c1 = new ColumnConstraints(120);
+        //c1.setPercentWidth(20);
         ColumnConstraints c2 = new ColumnConstraints();
         c2.setPercentWidth(28);
         ColumnConstraints c3 = new ColumnConstraints();
         c3.setPercentWidth(4);
-        ColumnConstraints c4 = new ColumnConstraints();
-        c4.setPercentWidth(20);
+        ColumnConstraints c4 = new ColumnConstraints(120);
+        //c4.setPercentWidth(20);
         ColumnConstraints c5 = new ColumnConstraints();
         c5.setPercentWidth(28);
         getColumnConstraints().addAll(c1, c2, c3, c4, c5);
