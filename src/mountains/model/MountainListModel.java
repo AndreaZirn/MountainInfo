@@ -23,12 +23,13 @@ import java.util.stream.Stream;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class MountainListModel {
 
     private static final String FILE_NAME = "mountains.csv";
 
-    private final IntegerProperty selectedMountainId  = new SimpleIntegerProperty(-1);
-    private final IntegerProperty selectedIndex     = new SimpleIntegerProperty(-1);
+    private final IntegerProperty selectedMountainId = new SimpleIntegerProperty(-1);
+    private final IntegerProperty selectedIndex = new SimpleIntegerProperty(-1);
 
     private final ObservableList<Command> undoStack = FXCollections.observableArrayList();
     private final ObservableList<Command> redoStack = FXCollections.observableArrayList();
@@ -42,12 +43,10 @@ public class MountainListModel {
 
     private final Mountain mountainProxy = new Mountain();
 
-
     private final ChangeListener<Object> propertyChangeListenerForUndoSupport = (observable, oldValue, newValue) -> {
         redoStack.clear();
         undoStack.add(0, new ValueChangeCommand(MountainListModel.this, (Property) observable, oldValue, newValue));
     };
-
 
     public MountainListModel() {
         mountains.addAll(readFromFile());
@@ -72,7 +71,7 @@ public class MountainListModel {
             }
         });
 
-        //Selectionhandling
+        //SelectionHandling
         selectedMountainIdProperty().addListener((observable, oldValue, newValue) -> {
                     Mountain oldSelection = getMountain((int) oldValue);
                     Mountain newSelection = getMountain((int) newValue);
@@ -89,10 +88,7 @@ public class MountainListModel {
                 }
         );
         setSelectedMountainId(1);
-
     }
-
-
 
     public ObservableList<Mountain> getMountains() {
         return mountains;
@@ -109,13 +105,16 @@ public class MountainListModel {
         return pmOptional.isPresent() ? pmOptional.get() : null;
     }
 
-
     public void addNewMountain() {
         int newId = mountains.stream()
-                .map(m -> {return m.getId();})
-                .max((id1, id2) -> { return id1.compareTo(id2); })
+                .map(m -> {
+                    return m.getId();
+                })
+                .max((id1, id2) -> {
+                    return id1.compareTo(id2);
+                })
                 .get();
-        newId = newId +1;
+        newId = newId + 1;
 
         Mountain newMountain = new Mountain();
         newMountain.setId(newId);
@@ -143,19 +142,18 @@ public class MountainListModel {
         property.addListener(propertyChangeListenerForUndoSupport);
     }
 
-
-    public void addToList(Mountain mountain){
+    public void addToList(Mountain mountain) {
         mountains.add(mountain);
         setSelectedMountainId(mountain.getId());
     }
 
-    public void removeFromList(Mountain mountain){
+    public void removeFromList(Mountain mountain) {
         unbindFromProxy(mountain);
         disableUndoSupport(mountain);
 
         mountains.remove(mountain);
 
-        if(!mountains.isEmpty()){
+        if (!mountains.isEmpty()) {
             setSelectedMountainId(mountains.get(0).getId());
         }
     }
@@ -234,7 +232,6 @@ public class MountainListModel {
         mountainProxy.kantonProperty().bindBidirectional(mountain.kantonProperty());
         mountainProxy.gebietProperty().bindBidirectional(mountain.gebietProperty());
         mountainProxy.bildunterschriftProperty().bindBidirectional(mountain.bildunterschriftProperty());
-
     }
 
     private void unbindFromProxy(Mountain mountain) {
@@ -255,7 +252,6 @@ public class MountainListModel {
         mountainProxy.bildunterschriftProperty().unbindBidirectional(mountain.bildunterschriftProperty());
     }
 
-
     public void save() {
         try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME, true))) {
             writer.write("ID;Name;Dominanz;Schartenhoehe;Hoehe;km bis;m bis;Typ;Region;Kanton;Gebiet;Bildunterschrift");
@@ -273,13 +269,12 @@ public class MountainListModel {
         }
     }
 
-
     private List<Mountain> readFromFile() {
         try (Stream<String> stream = getStreamOfLines(FILE_NAME)) {
             return stream
                     .skip(1)
-                    .map(s -> new Mountain(s.split(";")))      // aus jeder Zeile ein Objekt machen
-                    .collect(Collectors.toList());            // alles aufsammeln
+                    .map(s -> new Mountain(s.split(";")))      // make an object from every row
+                    .collect(Collectors.toList());            // collect all
         }
     }
 
@@ -291,11 +286,11 @@ public class MountainListModel {
         }
     }
 
-    private Path getPath(String fileName, boolean locatedInSameFolder)  {
+    private Path getPath(String fileName, boolean locatedInSameFolder) {
         try {
-            if(!locatedInSameFolder) {
+            if (!locatedInSameFolder) {
                 fileName = "/" + fileName;
-            }else{
+            } else {
                 fileName = "data/" + FILE_NAME;
             }
             return Paths.get(getClass().getClassLoader().getResource(fileName).toURI());
@@ -304,7 +299,7 @@ public class MountainListModel {
         }
     }
 
-
+    //getter & setter
     public int getSelectedIndex() {
         return selectedIndex.get();
     }

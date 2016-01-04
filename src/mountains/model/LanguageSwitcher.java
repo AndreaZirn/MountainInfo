@@ -6,6 +6,7 @@ import javafx.beans.property.StringProperty;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class LanguageSwitcher {
 
     public enum Lang {DE, EN}
@@ -39,7 +40,6 @@ public class LanguageSwitcher {
 
         SEARCH_TEXT("Suche:", "Search:");
 
-
         private final String germanLabel;
         private final String englishLabel;
 
@@ -55,7 +55,6 @@ public class LanguageSwitcher {
         public String getEnglishLabel() {
             return englishLabel;
         }
-
 
         public String getText(Lang lang){
             switch (lang){
@@ -97,7 +96,6 @@ public class LanguageSwitcher {
 
     private final StringProperty searchLabel = new SimpleStringProperty();
 
-
     public LanguageSwitcher() {
         setLanguage(Lang.DE);
     }
@@ -130,10 +128,9 @@ public class LanguageSwitcher {
         setHoeheColumnText(MultilanguageText.HOEHE_COLUMN_TEXT.getText(lang));
 
         setSearchLabel(MultilanguageText.SEARCH_TEXT.getText(lang));
-
     }
 
-
+    //getter & setter
     public String getApplicationTitle() {
         return applicationTitle.get();
     }

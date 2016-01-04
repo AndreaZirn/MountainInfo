@@ -1,11 +1,9 @@
 package mountains.model;
 
-
 import javafx.beans.property.*;
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
-
 
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
@@ -30,11 +28,9 @@ public class Mountain {
     private static final Image NO_PICTURE = new Image(Mountain.class.getResourceAsStream("/mountainpictures/noPicture.jpg"));
     private final ObjectProperty imageProperty = new SimpleObjectProperty<>();
 
-
-    //Default Konstruktor
+    //Default constructor
     public Mountain() {
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -55,14 +51,14 @@ public class Mountain {
         return id.hashCode();
     }
 
-    //Reihenfolge nach Spalten in csv-Datei
+    //Order after colums in csv-file
     public Mountain(String[] line) {
         setId(Integer.valueOf(line[0]));
         setName(line[1]);
         setHoehe(Double.valueOf(line[2]));
         setTyp(line[3]);
         setRegion(line[4]);
-        setKanton(line[5]); //TODO in mountain.csv ist diese Zeile leer. Evtl. Kantone einf�gen?
+        setKanton(line[5]);
         setGebiet(line[6]);
         setDominanz(Double.valueOf(line[7]));
         setKmBis(line[8]);
@@ -74,7 +70,6 @@ public class Mountain {
         setImageProperty(getPicture());
     }
 
-    //gleiche Reihenfolge wie oben bei "public Mountain (String..."
     public String infoAsLine() {
         StringBuffer info = new StringBuffer();
         info.append(getId() + ";");
@@ -93,17 +88,14 @@ public class Mountain {
         return info.toString();
     }
 
-    public Image getPicture(){
+    public Image getPicture() {
         InputStream stream = Mountain.class.getResourceAsStream("/mountainpictures/" + getId() + "-1.jpg");
 
         return stream != null ? new Image(stream) : NO_PICTURE;
     }
 
-    //getter und setter
-
-    public String getName() {
-        return name.get();
-    }
+    //getter & setter
+    public String getName() { return name.get(); }
 
     public StringProperty nameProperty() {
         return name;
@@ -260,5 +252,4 @@ public class Mountain {
     public void setHoehe(double hoehe) {
         this.hoehe.set(hoehe);
     }
-
 }

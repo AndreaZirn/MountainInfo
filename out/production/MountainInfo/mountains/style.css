@@ -1,30 +1,5 @@
-
-/*
-.table-view {
-    -fx-base: #1d1d1d;
-    -fx-control-inner-background: white;
-    -fx-background-color: white;
-    -fx-table-cell-border-color: transparent;
-    -fx-table-header-border-color: transparent;
-}
-
-.table-view .column-header-background {
-    -fx-background-color: transparent;
-}
-
-.table-view .column-header, .table-view .filler {
-    -fx-border-width: 1 1 1 1;
-    -fx-background-color: transparent;
-    -fx-border-color:
-        transparent
-        transparent
-        derive(-fx-base, 80%)
-        transparent;
-    -fx-border-insets: 0 10 1 0;
-}*/
-
 .buttonbar{
-      -fx-background-color: white;/*aliceblue*/
+      -fx-background-color: white;
       -fx-border-color: grey;
       -fx-border-width: 0 0 1 0;
 }
@@ -48,7 +23,6 @@
 .split-pane {
     -fx-padding: 0 0 0 0;
     -fx-background-color: white;
-    /*-fx-border-color: grey;*/
 }
 
 .grid {

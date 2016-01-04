@@ -3,8 +3,9 @@ package mountains.model;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
-public class AddCommand implements Command {
 
+public class AddCommand implements Command {
+    // Reference to the mountain list model
     private final MountainListModel mountainlist;
     private final Mountain added;
     private final int position;
@@ -23,6 +24,5 @@ public class AddCommand implements Command {
     @Override
     public void redo() {
         mountainlist.addToList(added);
-
     }
 }

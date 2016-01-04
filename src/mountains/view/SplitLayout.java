@@ -7,8 +7,9 @@ import mountains.model.MountainListModel;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
-public class SplitLayout extends SplitPane implements ViewMixin<MountainListModel> {
 
+public class SplitLayout extends SplitPane implements ViewMixin<MountainListModel> {
+    // Reference to the mountain list model
     private final MountainListModel mountainlist;
 
     public SplitLayout(MountainListModel mountainlist) {
@@ -16,15 +17,16 @@ public class SplitLayout extends SplitPane implements ViewMixin<MountainListMode
         init();
     }
 
-
     @Override
     public MountainListModel getPresentationModel() {
         return mountainlist;
     }
+
     @Override
     public void initializeControls() {
         setPadding(new Insets(20));
     }
+
     @Override
     public void layoutControls() {
         setDividerPositions(0.4, 0.6);

@@ -13,10 +13,10 @@ import mountains.model.LanguageSwitcher;
 import mountains.model.Mountain;
 import mountains.model.MountainListModel;
 
-
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class DataView extends GridPane implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
     private final MountainListModel mountainlist;

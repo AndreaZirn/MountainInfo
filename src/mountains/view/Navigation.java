@@ -11,8 +11,9 @@ import mountains.model.MountainListModel;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
-public class Navigation extends HBox implements ViewMixin<MountainListModel>{
 
+public class Navigation extends HBox implements ViewMixin<MountainListModel> {
+    // Reference to the mountain list model
     private final MountainListModel mountainlist;
 
     private final LanguageSwitcher languageModel;
@@ -39,6 +40,7 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
     public MountainListModel getPresentationModel() {
         return mountainlist;
     }
+
     @Override
     public void initializeControls() {
         englishButton = new Button();
@@ -51,7 +53,6 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
 
         hbox1.setAlignment(Pos.CENTER_RIGHT);
         hbox1.getChildren().addAll(englishButton, germanButton);
-
     }
 
     @Override
@@ -85,7 +86,6 @@ public class Navigation extends HBox implements ViewMixin<MountainListModel>{
         deleteButton.textProperty().bind(languageModel.deleteButtonTextProperty());
         undoButton.textProperty().bind(languageModel.undoButtonTextProperty());
         redoButton.textProperty().bind(languageModel.redoButtonTextProperty());
-
     }
 
 }

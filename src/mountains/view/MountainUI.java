@@ -7,7 +7,9 @@ import mountains.model.MountainListModel;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class MountainUI extends BorderPane implements ViewMixin<MountainListModel> {
+    // Reference to the mountain list model
     private final MountainListModel model;
     private final LanguageSwitcher languageModel;
 
@@ -15,7 +17,6 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
     private Navigation navigation;
     private DataView dataview;
     private Tableview tableview;
-
 
     public MountainUI(MountainListModel model, LanguageSwitcher languageModel) {
         this.model = model;
@@ -29,7 +30,7 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
     }
 
     @Override
-    //Initialisierung aller Controls
+    //initialization from every controler
     public void initializeControls() {
         splitLayout = new SplitLayout(model);
         navigation = new Navigation(model, languageModel);
@@ -37,12 +38,11 @@ public class MountainUI extends BorderPane implements ViewMixin<MountainListMode
         tableview = new Tableview(model, languageModel);
     }
 
-    //Anordenen aller Controler
+    //arrange every controler
     public void layoutControls() {
         setTop(navigation);
         setCenter(splitLayout);
         splitLayout.getItems().addAll(tableview, dataview);
-
     }
 }
 

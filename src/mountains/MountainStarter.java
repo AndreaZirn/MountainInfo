@@ -13,35 +13,32 @@ import mountains.model.LanguageSwitcher;
 import mountains.model.MountainListModel;
 import mountains.view.MountainUI;
 
-
 public class MountainStarter extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-            MountainListModel model = new MountainListModel();
+        MountainListModel model = new MountainListModel();
 
-            LanguageSwitcher languageModel = new LanguageSwitcher();
+        LanguageSwitcher languageModel = new LanguageSwitcher();
 
-            Parent rootPanel = new MountainUI(model, languageModel);
+        Parent rootPanel = new MountainUI(model, languageModel);
 
-            Scene scene = new Scene(rootPanel);
+        Scene scene = new Scene(rootPanel);
 
+        String stylesheet = getClass().getResource("style.css").toExternalForm();
+        scene.getStylesheets().add(stylesheet);
 
-            String stylesheet = getClass().getResource("style.css").toExternalForm();
-            scene.getStylesheets().add(stylesheet);
+        primaryStage.getIcons().add(new Image("wappen/wappen_gross/switzerland.png"));
 
-        
-            primaryStage.getIcons().add(new Image("wappen/wappen_gross/switzerland.png"));
+        primaryStage.titleProperty().bind(languageModel.applicationTitleProperty());
+        primaryStage.setScene(scene);
 
-            primaryStage.titleProperty().bind(languageModel.applicationTitleProperty());
-            primaryStage.setScene(scene);
+        primaryStage.setWidth(900);
+        primaryStage.setHeight(750);
+        primaryStage.centerOnScreen();
 
-            primaryStage.setWidth(900);
-            primaryStage.setHeight(750);
-            primaryStage.centerOnScreen();
-
-            primaryStage.show();
-        }
+        primaryStage.show();
+    }
 
     public static void main(String[] args) {
         launch(args);

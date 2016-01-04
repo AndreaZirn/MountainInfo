@@ -17,6 +17,7 @@ import mountains.model.MountainListModel;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
+
 public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     // Reference to the mountain list model
     private final MountainListModel mountainlist;
@@ -39,7 +40,6 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         this.languageModel = languageModel;
         init();
     }
-
 
     @Override
     public MountainListModel getPresentationModel() {
@@ -64,15 +64,12 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
                 // Compare name of every mountain with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-
                 if (mountain.getName() != null && mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches name.
-
                 }
                 return false; // Does not match.
             });
         });
-
     }
 
     private TableView<Mountain> initializeMountainTabelle() {
@@ -104,9 +101,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         setPadding(new Insets(10, 0, 10, 10));
 
         return tableView;
-
     }
-
 
     @Override
     public void layoutControls() {
@@ -121,7 +116,6 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         ColumnConstraints c3 = new ColumnConstraints();
         c3.setPercentWidth(69);
         searchPane.getColumnConstraints().addAll(c1, c2, c3);
-
     }
 
     @Override
@@ -144,9 +138,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
             } else {
                 mountainTable.getSelectionModel().select(mountainlist.getMountain((int) newValue));
             }
-
             mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
-
         });
     }
 
@@ -157,9 +149,9 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         hoeheColumn.textProperty().bind(languageModel.hoeheColumnTextProperty());
         searchLabel.textProperty().bind(languageModel.searchLabelProperty());
         mountainlist.sortedData.comparatorProperty().bind(mountainTable.comparatorProperty());
-
     }
 
+    //setter
     public Label getSearchLabel() {
         return searchLabel;
     }

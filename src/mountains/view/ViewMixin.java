@@ -3,7 +3,8 @@ package mountains.view;
 /**
  * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
-public interface ViewMixin <T> {
+
+public interface ViewMixin<T> {
 
     T getPresentationModel();
 
@@ -17,7 +18,7 @@ public interface ViewMixin <T> {
 
     void initializeControls();
 
-    //Anordenen aller Controler
+    //arrange every controler
     void layoutControls();
 
     default void addEventHandlers() {
