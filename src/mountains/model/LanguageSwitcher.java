@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Created by andreazirn on 28/12/15.
+ * Created by Andrea Zirn and Irina Terribilini, oop2, Dieter Holz, HS2015
  */
 public class LanguageSwitcher {
 

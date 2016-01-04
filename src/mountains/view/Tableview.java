@@ -45,6 +45,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
     public MountainListModel getPresentationModel() {
         return mountainlist;
     }
+
     @Override
     public void initializeControls() {
         mountainTable = initializeMountainTabelle();
@@ -63,8 +64,10 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
                 // Compare name of every mountain with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
+
+                if (mountain.getName() != null && mountain.getName().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches name.
+
                 }
                 return false; // Does not match.
             });
@@ -72,7 +75,7 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
 
     }
 
-    private TableView<Mountain> initializeMountainTabelle(){
+    private TableView<Mountain> initializeMountainTabelle() {
         TableView<Mountain> tableView = new TableView<>(mountainlist.getMountains());
 
         idColumn = new TableColumn<>();
@@ -120,9 +123,14 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         searchPane.getColumnConstraints().addAll(c1, c2, c3);
 
     }
+
     @Override
     public void addEventHandlers() {
-        mountainChangeListener = (observable, oldMountain, newMountain) -> mountainlist.setSelectedMountainId(newMountain.getId());
+        mountainChangeListener = (observable, oldMountain, newMountain) -> {
+            if (newMountain != null) {
+                mountainlist.setSelectedMountainId(newMountain.getId());
+            }
+        };
         mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
     }
 
@@ -131,17 +139,17 @@ public class Tableview extends VBox implements ViewMixin<MountainListModel> {
         mountainlist.selectedMountainIdProperty().addListener((observable, oldValue, newValue) -> {
             mountainTable.getSelectionModel().selectedItemProperty().removeListener(mountainChangeListener);
 
-            if((int)newValue == -1){
+            if ((int) newValue == -1) {
                 mountainTable.getSelectionModel().clearSelection();
-            }
-            else {
-                mountainTable.getSelectionModel().select(mountainlist.getMountain((int)newValue));
+            } else {
+                mountainTable.getSelectionModel().select(mountainlist.getMountain((int) newValue));
             }
 
             mountainTable.getSelectionModel().selectedItemProperty().addListener(mountainChangeListener);
 
         });
     }
+
     @Override
     public void addBindings() {
         idColumn.textProperty().bind(languageModel.idColumnTextProperty());
