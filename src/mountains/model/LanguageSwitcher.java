@@ -31,7 +31,7 @@ public class LanguageSwitcher {
         TYP_TEXT("Typ:", "Type:"),
         REGION_TEXT("Region:", "Region:"),
         KANTON_TEXT("Kanton:", "Canton:"),
-        GEBIET_TEXT("Region:", "Area:"),
+        GEBIET_TEXT("Gebiet:", "Area:"),
         BILDUNT_TEXT("Bildunterschrift:", "Caption:"),
 
         ID_COLUMN_TEXT("ID", "ID"),
